@@ -81,3 +81,16 @@
 .project-card:hover img {
   opacity: 0.9;
 }
+
+@media (min-width: 1024px) {
+  .project-img img {
+    height: 700px;
+  }
+  .project-content-description{
+    width: 50%;
+  }
+  .project-content-hashtag{
+   display: flex;
+   justify-content: flex-start;
+  }
+}

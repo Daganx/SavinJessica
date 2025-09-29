@@ -22,3 +22,40 @@
   object-fit: cover;
   height: 100%;
 }
+
+@media (min-width: 1024px) {
+  .presentation {
+    flex-direction: row;
+    align-items: stretch; 
+    justify-content: space-between;
+  }
+  .presentation h2{
+    text-align: left;
+  }
+
+  .presentation-text {
+    flex: 1; 
+    max-width: 50%;
+    padding: 2rem; 
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 1.3em;
+  }
+
+  .presentation-img {
+    flex: 1; /* prend 50% */
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .presentation-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* garde un rendu propre */
+    border-radius: 25px;
+  }
+}

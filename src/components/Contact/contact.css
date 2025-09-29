@@ -30,3 +30,8 @@
   justify-content: center;
   gap: 1em;
 }
+@media (min-width: 1024px) {
+  .contact-text{
+    width: 50%;
+  }
+}

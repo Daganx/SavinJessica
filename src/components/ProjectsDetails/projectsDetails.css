@@ -35,3 +35,12 @@
   font-size: 1.2em;
   text-align: justify;
 }
+
+@media (min-width: 1024px) {
+  .projects-details img{
+    height: 700px;
+  }
+  .projects-text{
+    width: 80%;
+  }
+}

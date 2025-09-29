@@ -4,8 +4,8 @@
   align-items: center;
 }
 .navbar-logo {
-  height: 100px;
-  width: 100px;
+  height: 140px;
+  width: 140px;
 }
 .navbar-logo-img {
   height: 100%;
@@ -40,4 +40,9 @@
 }
 .navbar-links ul li a:hover::after {
   width: 100%;
+}
+@media (min-width: 1024px) {
+  .navbar-links ul li {
+    font-size: 1.6em;
+  }
 }

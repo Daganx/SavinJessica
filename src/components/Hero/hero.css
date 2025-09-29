@@ -32,3 +32,11 @@
 .hero-text path {
   cursor: pointer;
 }
+
+@media (min-width: 1024px) {
+  .hero-text h1{
+    font-size: 4.2em;
+  }
+
+
+}

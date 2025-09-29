@@ -4,10 +4,12 @@
 
 .project-content-hashtag {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.2em;
   padding-bottom: 1em;
+  padding-left: 2em;
 }
 
 .project-content-hashtag p {
