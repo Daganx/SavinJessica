@@ -1,0 +1,24 @@
+.presentation {
+  padding: 0.2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.presentation h2 {
+  text-align: center;
+  font-family: "Fairplay";
+  font-weight: 400;
+  font-size: 3em;
+}
+.presentation h3 {
+  text-align: justify;
+  padding: 0.6em;
+  font-weight: 400;
+}
+.presentation-img img {
+  width: 100%;
+  border-radius: 25px;
+  object-fit: cover;
+  height: 100%;
+}

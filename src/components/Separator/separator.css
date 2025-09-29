@@ -1,0 +1,9 @@
+.separator {
+  width: 98vw;
+  height: 2px;
+  background-color: #ff9058;
+  margin: 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,83 @@
+.projects {
+  padding: 0.2em;
+}
+
+.projects h2 {
+  font-family: "Fairplay";
+  font-size: 3em;
+  font-weight: 400;
+  text-align: center;
+  color: black;
+}
+
+.project-img {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 32px;
+  gap: 16px;
+  position: relative;
+  cursor: pointer;
+}
+.project-img img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 25px;
+}
+.project-content {
+  position: absolute;
+  bottom: 0.2em;
+  left: 0px;
+}
+.project-content p {
+  padding: 16px;
+  color: white;
+}
+.project-content-description {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 25px;
+}
+.projects-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 32px 0px 32px;
+}
+.projects-link a {
+  font-size: 1.3rem;
+}
+.projects-link a {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+.projects-link a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: #ff9058;
+  transition: width 0.3s ease;
+}
+.projects-link a:hover::after {
+  width: 100%;
+}
+.project-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+.project-card img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 25px;
+  transition: opacity 0.3s ease;
+}
+.project-card:hover img {
+  opacity: 0.9;
+}

@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Playfair";
+  src: url("./assets/fonts/Playfair/PlayfairDisplay-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "PTSans";
+  src: url("./assets/fonts/PTSans/PTSans-Regular.ttf");
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  list-style: none;
+  font-family: "PTSans";
+}
+a {
+  text-decoration: none;
+  color: black;
+}

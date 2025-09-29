@@ -1,0 +1,57 @@
+.footer {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+.footer h1 {
+  font-size: 2em;
+  font-family: "Fairplay";
+  font-weight: 400;
+}
+.footer h2 {
+  font-weight: 400;
+  font-size: 1.2rem;
+  padding-left: 16px;
+  padding-top: 16px;
+}
+.footer h3 {
+  font-weight: 400;
+  font-size: 1.2rem;
+  padding-left: 16px;
+}
+.footer h4 {
+  font-weight: 400;
+  font-size: 1.2rem;
+  padding-left: 16px;
+  padding-bottom: 16px;
+}
+.footer h5 {
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding-left: 16px;
+}
+.footer-logo {
+  height: 100px;
+  width: 100px;
+}
+
+.footer-logo-img {
+  height: 100%;
+  width: 100%;
+}
+
+.footer-socials ul {
+  display: flex;
+}
+
+.footer-socials ul li {
+  margin-right: 5vw;
+}
+
+@media screen and (max-width: 475px) {
+  .footer-logo {
+    display: none;
+  }
+}
