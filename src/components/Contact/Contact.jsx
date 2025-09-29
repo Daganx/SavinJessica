@@ -1,9 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faInstagram,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 import "./contact.css";
 import ContactForm from "../ContactForm/ContactForm";
@@ -25,9 +21,13 @@ export default function Contact() {
             sunt odio fugit similique mollitia.
           </h2>
           <div className="contact-socials">
-            <FontAwesomeIcon icon={faFacebook} size="3x" color="#FF9058" />
-            <FontAwesomeIcon icon={faInstagram} size="3x" color="#FF9058" />
-            <FontAwesomeIcon icon={faLinkedin} size="3x" color="#FF9058" />
+            <a
+              href="https://www.instagram.com/ton_profil/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faInstagram} size="3x" color="#FF9058" />
+            </a>
           </div>
         </div>
         <div className="contact-form">

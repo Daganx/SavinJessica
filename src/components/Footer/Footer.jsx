@@ -10,16 +10,16 @@ export default function Footer() {
       <div className="footer-infos">
         <h1>Jessica Savin - Créatrice d'intérieurs</h1>
         <h2>
-          <FontAwesomeIcon icon={faHome} size="1x" color="black" /> - Rue - Code
-          Postal{" "}
+          <FontAwesomeIcon icon={faHome} size="1x" color="black" /> - La
+          Norville - 91000{" "}
         </h2>
         <h3>
-          <FontAwesomeIcon icon={faPhone} size="1x" color="black" /> - N°.
-          Télephone
+          <FontAwesomeIcon icon={faPhone} size="1x" color="black" /> - 06 11 41
+          99 10
         </h3>
         <h4>
           <FontAwesomeIcon icon={faMailBulk} size="1x" color="black" /> -
-          Adresse E-Mail
+          jscreatricedinterieurs@gmail.com
         </h4>
         <h5>Conditions Générales de Vente</h5>
       </div>

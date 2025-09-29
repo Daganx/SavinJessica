@@ -31,6 +31,7 @@ export default function LatestProjects() {
           <Link
             key={project.id}
             to={`/projects/${project.id}`}
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="project-card"
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
@@ -44,12 +45,7 @@ export default function LatestProjects() {
               alt={project.title}
             />
             <div className="project-content">
-              <div className="project-content-hashtag">
-                <p>{project.customer}</p>
-                <p>{project.year}</p>
-                <p>{project.price}</p>
-                <p>{project.time}</p>
-              </div>
+              
               <p className="project-content-description">
                 {project.description}
               </p>
@@ -59,7 +55,12 @@ export default function LatestProjects() {
       </div>
 
       <div className="projects-link">
-        <Link to="/projects">Voir tout mes projets</Link>
+        <Link
+          to="/projects"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          Voir tout mes projets
+        </Link>
       </div>
     </div>
   );

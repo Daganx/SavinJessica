@@ -26,17 +26,17 @@
 @media (min-width: 1024px) {
   .presentation {
     flex-direction: row;
-    align-items: stretch; 
+    align-items: stretch;
     justify-content: space-between;
   }
-  .presentation h2{
+  .presentation h2 {
     text-align: left;
   }
 
   .presentation-text {
-    flex: 1; 
+    flex: 1;
     max-width: 50%;
-    padding: 2rem; 
+    padding: 2rem;
     text-align: left;
     display: flex;
     flex-direction: column;

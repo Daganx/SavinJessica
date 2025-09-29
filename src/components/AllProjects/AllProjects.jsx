@@ -43,12 +43,6 @@ export default function AllProjects() {
               className="all-projects-image"
             />
             <div className="project-content">
-              <div className="project-content-hashtag">
-                <p>{project.customer}</p>
-                <p>{project.year}</p>
-                <p>{project.price}</p>
-                <p>{project.time}</p>
-              </div>
               <p className="project-content-description">
                 {project.description}
               </p>

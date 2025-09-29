@@ -86,11 +86,11 @@
   .project-img img {
     height: 700px;
   }
-  .project-content-description{
+  .project-content-description {
     width: 50%;
   }
-  .project-content-hashtag{
-   display: flex;
-   justify-content: flex-start;
+  .project-content-hashtag {
+    display: flex;
+    justify-content: flex-start;
   }
 }
