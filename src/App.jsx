@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer";
 import ContactPage from "./pages/Contact/ContactPage";
 import Login from "./components/Login/Login";
 import AdminDashboard from "./components/AdminDashboard/AdminDashboard";
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 
 export default function App() {
   return (
@@ -18,7 +19,14 @@ export default function App() {
         <Route path="/projects/:id" element={<ProjectsDetails />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/admin" element={<AdminDashboard />} />
+        <Route
+          path="/admin"
+          element={
+            <ProtectedRoute>
+              <AdminDashboard />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
       <Footer />
     </>
