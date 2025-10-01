@@ -21,7 +21,8 @@
   margin: 1em;
 }
 
-@media (max-width: 768px){
-.project-content-hashtag{
-  display: none;
-}}
+@media (max-width: 768px) {
+  .project-content-hashtag {
+    display: none;
+  }
+}
