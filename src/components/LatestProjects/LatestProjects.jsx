@@ -38,7 +38,7 @@ export default function LatestProjects() {
             (prevIndex + 1) % latestProjects[hoveredIndex].images.length;
           return { ...prev, [hoveredIndex]: nextIndex };
         });
-      }, 1500);
+      }, 2500);
       return () => clearInterval(interval);
     }
   }, [hoveredIndex, latestProjects]);

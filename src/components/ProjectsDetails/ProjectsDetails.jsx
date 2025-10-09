@@ -71,7 +71,7 @@ export default function ProjectsDetails() {
             <li>Lieu : {project.place}</li>
             <li>Besoin : {project.need}</li>
           </ul>
-          <p className="projects-bio">{project.prestation}</p>
+          <p className="projects-bio">Prestation : {project.prestation}</p>
           <p className="projects-bio">{project.description}</p>
         </div>
       </section>

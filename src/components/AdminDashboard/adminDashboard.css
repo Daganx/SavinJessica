@@ -113,13 +113,12 @@
   gap: 12px;
 }
 
-.project-card {
+.project-card-admin {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid #eeeeee;
-  padding: 10px;
   border-radius: 8px;
+  padding: 10px;
 }
 
 .project-info {

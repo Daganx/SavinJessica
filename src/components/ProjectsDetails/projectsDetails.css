@@ -25,14 +25,14 @@
 .projects-details ul li {
   background-color: #ff9058;
   border-radius: 25px;
-  padding: 16px;
+  padding: 4px;
   font-size: 0.8em;
 }
 .projects-details img {
   width: 100%;
   height: 500px;
   border-radius: 25px;
-  object-fit: cover;
+  object-fit: fill;
 }
 .projects-bio {
   padding: 32px;

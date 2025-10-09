@@ -350,7 +350,7 @@ export default function AdminDashboard() {
       ) : (
         <div className="projects-list">
           {projects.map((p) => (
-            <div key={p._id} className="project-card">
+            <div key={p._id} className="project-card-admin">
               <div className="project-info">
                 <div>
                   <div className="project-title">{p.title}</div>

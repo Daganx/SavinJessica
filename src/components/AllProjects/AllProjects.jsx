@@ -39,7 +39,7 @@ export default function AllProjects() {
             (prevIndex + 1) % projects[hoveredIndex].images.length;
           return { ...prev, [hoveredIndex]: nextIndex };
         });
-      }, 1500);
+      }, 2500);
       return () => clearInterval(interval);
     }
   }, [hoveredIndex, projects]);
