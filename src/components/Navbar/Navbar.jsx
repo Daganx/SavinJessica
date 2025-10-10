@@ -18,6 +18,9 @@ export default function Navbar() {
       <div className="navbar-links">
         <ul>
           <li>
+            <Link to="/approche">Approche</Link>
+          </li>
+          <li>
             <Link to="/projects">Réalisations</Link>
           </li>
           <li>

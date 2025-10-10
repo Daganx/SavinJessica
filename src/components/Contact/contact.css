@@ -4,34 +4,52 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding-top: 1rem;
 }
 
-.contact-text {
+.contact-img {
   width: 100%;
 }
 
-.contact-text h1 {
-  font-size: 3em;
+.contact-img img{
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+  padding: 1rem;
+}
+
+.contact-form h1 {
+  font-size: 2.8em;
   font-family: "Fairplay";
   font-weight: 400;
+  padding-bottom: 1rem;
 }
 
-.contact-text h2 {
+.contact-form h2 {
   font-size: 1.1em;
-  text-align: justify;
-  padding: 1em;
+  text-align: center;
   font-weight: 400;
+  padding-bottom: 2rem;
 }
 
-.contact-socials {
-  padding-bottom: 2em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1em;
+.contact-form{
+  width: 100%;
 }
+
 @media (min-width: 1024px) {
-  .contact-text {
-    width: 50%;
+  .contact{
+    flex-direction: row;
   }
+  .contact-img {
+    width: 70%;
+  }
+  .contact-form h1{
+    font-size: 3em;
+  }
+  .contact-form h2{
+    padding: 1rem;
+    font-size: 1.3em;
+    padding-bottom: 2rem;
+  }
+  
 }

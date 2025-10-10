@@ -86,7 +86,7 @@ export default function LatestProjects() {
           to="/projects"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          Voir tout mes projets
+          Voir toutes mes réalisations
         </Link>
       </div>
     </div>

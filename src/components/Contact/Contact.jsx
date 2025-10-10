@@ -1,40 +1,34 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-
 import "./contact.css";
+import contactPhoto from "../../assets/images/contact/contact.jpg";
+// import localisationPhoto from "../../assets/images/contact/localisation.png";
 import ContactForm from "../ContactForm/ContactForm";
 import Separator from "../Separator/Separator";
 
 export default function Contact() {
   return (
-    <>
+    <div>
       <section className="contact">
-        <div className="contact-text">
-          <h1>Contactez-moi :</h1>
-          <h2>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-            harum, adipisci, at nemo pariatur odio recusandae exercitationem
-            dolores autem sed laborum! Quaerat, reiciendis. Voluptatem ad
-            provident aut hic animi est. Fuga at eveniet voluptas quibusdam aut
-            doloribus nulla dolorem praesentium ex ea culpa placeat odio facilis
-            nesciunt, corrupti cumque. Dolores natus, aspernatur ducimus quam id
-            sunt odio fugit similique mollitia.
-          </h2>
-          <div className="contact-socials">
-            <a
-              href="https://www.instagram.com/ton_profil/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faInstagram} size="3x" color="#FF9058" />
-            </a>
-          </div>
+        <div className="contact-img">
+          <img src={contactPhoto} alt="Photo de Contact Jessica Savin" />
         </div>
         <div className="contact-form">
+          <h1>Et si on en parlait ?</h1>
+          <h2>
+            Un projet commence souvent par une intuition. Une envie de
+            changement, une couleur, une sensation.
+            <br />
+            <br />
+            Prenons le temps d’en parler. Autour d’un café, d’un plan ou d’une
+            simple idée, je serai là pour écouter, imaginer et vous guider dans
+            cette belle aventure.
+            <br />
+            <br />
+            Chaque rencontre est le début d’un nouvel espace à révéler.
+          </h2>
           <ContactForm />
         </div>
       </section>
       <Separator />
-    </>
+    </div>
   );
 }

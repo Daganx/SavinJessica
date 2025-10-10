@@ -4,8 +4,8 @@
   align-items: center;
 }
 .navbar-logo {
-  height: 140px;
-  width: 140px;
+  height: 100px;
+  width: 100px;
 }
 .navbar-logo-img {
   height: 100%;
@@ -15,14 +15,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 2em;
 }
 .navbar-links ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 32px;
-  margin-right: 1em;
+  gap: 16px;
+  padding-right: 1rem;
 }
 .navbar-links ul li a {
   position: relative;
@@ -43,7 +42,18 @@
   width: 100%;
 }
 @media (min-width: 1024px) {
+  .navbar-links{
+    padding-right: 2em;
+  }
+
+  .navbar-links ul{
+    gap: 32px;
+  }
   .navbar-links ul li {
     font-size: 1.6em;
+  }
+  .navbar-logo {
+    height: 140px;
+    width: 140px;
   }
 }

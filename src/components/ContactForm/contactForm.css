@@ -1,5 +1,6 @@
 .contact-form {
   width: 80%;
+  padding-top: 1rem;
 }
 .contact-form form {
   display: flex;

@@ -5,57 +5,135 @@
   align-items: center;
   justify-content: center;
 }
-.presentation h2 {
+
+/* TITRE ET TEXTE */
+.presentation-text h2 {
   text-align: center;
   font-family: "Fairplay";
   font-weight: 400;
   font-size: 3em;
-}
-.presentation h3 {
-  text-align: justify;
-  padding: 0.6em;
-  font-weight: 400;
-}
-.presentation-img img {
-  width: 100%;
-  border-radius: 25px;
-  object-fit: cover;
-  height: 100%;
+  margin-bottom: 0.4em;
 }
 
+.presentation h3 {
+  text-align: left;
+  padding: 0.6em 1em;
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: 1.1em;
+}
+
+/* SLIDER */
+.presentation-img {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 25px;
+  margin-top: 1.5rem;
+}
+
+.presentation-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.presentation-img img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* --- VERSION DESKTOP --- */
 @media (min-width: 1024px) {
   .presentation {
     flex-direction: row;
-    align-items: stretch;
+    align-items: stretch; /* 👈 important : aligne les hauteurs */
     justify-content: space-between;
+    gap: 2rem;
   }
+
   .presentation h2 {
     text-align: left;
+    font-size: 3em;
   }
 
   .presentation-text {
     flex: 1;
     max-width: 50%;
     padding: 2rem;
-    text-align: left;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     font-size: 1.3em;
   }
 
   .presentation-img {
-    flex: 1; /* prend 50% */
+    flex: 1;
     max-width: 50%;
+    position: relative;
+    border-radius: 25px;
+    /* 👇 rend le bloc image égal en hauteur au texte */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: stretch;
+  }
+
+  .presentation-img::before {
+    content: "";
+    display: block;
+    padding-top: 0; /* on supprime la hauteur fixe */
   }
 
   .presentation-img img {
+    position: absolute;
+    inset: 0; /* remplace top/left/right/bottom:0 */
     width: 100%;
     height: 100%;
-    object-fit: cover; /* garde un rendu propre */
+    object-fit: cover;
     border-radius: 25px;
+  }
+}
+
+/* --- VERSION MOBILE --- */
+@media (max-width: 1023px) {
+  .presentation {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .presentation-text {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .presentation h2 {
+    font-size: 3em;
+  }
+
+  .presentation h3 {
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  .presentation-img {
+    width: 100%;
+    border-radius: 25px;
+    margin-top: 1rem;
+    height: 500px; /* ✅ s'adapte à l'image */
+    aspect-ratio: 16 / 9; /* garde une belle proportion */
+  }
+
+  .presentation-img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
