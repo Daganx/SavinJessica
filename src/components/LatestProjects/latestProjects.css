@@ -22,7 +22,7 @@
 .project-img img {
   width: 100%;
   height: 500px;
-  object-fit: fill;
+  object-fit: cover;
   border-radius: 25px;
 }
 .project-content {
@@ -87,6 +87,7 @@
 @media (min-width: 1024px) {
   .project-img img {
     height: 700px;
+    object-fit: cover;
   }
   .project-content-description {
     width: 50%;
