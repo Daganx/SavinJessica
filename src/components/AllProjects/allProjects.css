@@ -1,28 +1,107 @@
 .all-projects {
-  padding: 0.2em;
+  text-align: center;
+  background-color: #ffffff;
 }
 
-.project-content-hashtag {
+/* ---- TITRE ---- */
+.all-projects h2 {
+  font-size: 62.4px;
+  font-family: "Fairplay";
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+/* ---- GRILLE ---- */
+.all-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 👉 2 cards par ligne */
+  gap: 1rem;
+  justify-items: center;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* ---- CARD ---- */
+.all-projects-card {
+  position: relative; /* ✅ nécessaire pour positionner les hashtags dessus */
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+
+.all-projects-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* ---- IMAGE ---- */
+.all-projects-image {
+  width: 100%;
+  height: 500px; /* 👉 plus grande image */
+  object-fit: cover;
+  display: block;
+}
+
+/* ---- HASHTAGS ---- */
+.all-projects-hashtags {
+  position: absolute; /* ✅ positionné au-dessus de l'image */
+  bottom: 1rem; /* distance depuis le bas */
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 0.2em;
-  padding-bottom: 1em;
-  padding-left: 2em;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 0 0.5rem;
+  font-size: 0.8rem;
+  color: white;
+  pointer-events: none; /* pour éviter que le clic soit bloqué */
 }
 
-.project-content-hashtag p {
-  background-color: #ff9058;
+.all-projects-hashtags p {
+  background-color: rgba(0, 0, 0, 0.4); /* semi-transparent pour lisibilité */
   border-radius: 25px;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  pointer-events: auto; /* permet le survol si tu veux ajouter des interactions */
 }
 
-.project-content-description {
-  margin: 1em;
+/* ---- SEPARATOR ---- */
+.all-projects Separator {
+  margin-top: 4rem;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 1024px) {
+  .all-projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .all-projects-card {
+    max-width: 450px;
+  }
+
+  .all-projects-image {
+    height: 280px;
+  }
 }
 
 @media (max-width: 768px) {
-  .project-content-hashtag {
-    display: none;
+  .all-projects-grid {
+    grid-template-columns: 1fr; /* 👉 1 card par ligne sur mobile */
+  }
+
+  .all-projects-card {
+    max-width: 100%;
+  }
+
+  .all-projects-image {
+    height: 250px;
   }
 }

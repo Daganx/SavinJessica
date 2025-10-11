@@ -42,11 +42,11 @@
   width: 100%;
 }
 @media (min-width: 1024px) {
-  .navbar-links{
+  .navbar-links {
     padding-right: 2em;
   }
 
-  .navbar-links ul{
+  .navbar-links ul {
     gap: 32px;
   }
   .navbar-links ul li {

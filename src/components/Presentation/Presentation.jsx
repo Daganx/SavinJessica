@@ -45,7 +45,7 @@ export default function Presentation() {
           <img
             key={index}
             src={img}
-            alt={`Présentation ${index + 1}`}
+            alt={`Présentation Jessica Savin Décoratrice d'intérieurs ${index + 1}`}
             className={index === currentIndex ? "active" : ""}
           />
         ))}

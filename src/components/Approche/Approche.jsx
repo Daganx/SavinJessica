@@ -13,7 +13,7 @@ export default function Approche() {
         <div className="approche">
           <div className="approche-text">
             <div className="approche-img">
-              <img src={approche1}></img>
+              <img src={approche1} alt="Jessica Savin Créatrice d'intérieurs" />
             </div>
             <div className="approche-info">
               <h2>Mon approche :</h2>
@@ -38,7 +38,7 @@ export default function Approche() {
 
         <div className="prestations">
           <div className="prestations-img">
-            <img src={approche2} alt="" />
+            <img src={approche2} alt="Jessica Savin Créatrice d'intérieurs" />
           </div>
           <div className="prestations-info">
             <h2>Mes prestations :</h2>
@@ -49,9 +49,11 @@ export default function Approche() {
               Qu’il s’agisse d’un simple conseil couleur, d’une rénovation
               complète ou d’un accompagnement déco, j’adapte ma démarche à vos
               besoins et à votre rythme.
-              <br /><br /> Mon objectif : que vous puissiez vous projeter, choisir en
+              <br />
+              <br /> Mon objectif : que vous puissiez vous projeter, choisir en
               toute confiance et savourer la transformation, étape après étape.
-              <br /><br />
+              <br />
+              <br />
               Du premier échange à la touche finale, je veille à créer un
               dialogue fluide et bienveillant, où votre espace devient le reflet
               harmonieux de votre quotidien.
@@ -79,7 +81,7 @@ export default function Approche() {
 
         <div className="timeline">
           <div className="prestations-img">
-            <img src={approche3} alt="" />
+            <img src={approche3} alt="Jessica Savin Créatrice d'intérieurs" />
           </div>
           <div className="timeline-info">
             <h2>Ma manière de travailler :</h2>

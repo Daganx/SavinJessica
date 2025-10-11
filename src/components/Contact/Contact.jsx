@@ -9,7 +9,10 @@ export default function Contact() {
     <div>
       <section className="contact">
         <div className="contact-img">
-          <img src={contactPhoto} alt="Photo de Contact Jessica Savin" />
+          <img
+            src={contactPhoto}
+            alt="Photo de Contact Jessica Savin Décoratrice d'intérieurs"
+          />
         </div>
         <div className="contact-form">
           <h1>Et si on en parlait ?</h1>
