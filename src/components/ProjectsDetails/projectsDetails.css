@@ -7,10 +7,9 @@
 
 /* ---- Conteneur principal ---- */
 .projects-details-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column; /* image en haut, texte en bas */
   gap: 2rem;
-  align-items: center;
   max-width: 1200px;
   width: 100%;
 }
@@ -21,15 +20,19 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  position: relative; /* ✅ pour que la modale soit au-dessus */
 }
 
 .projects-details-image .main-image {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: contain; /* ✅ on affiche toute l'image */
+  aspect-ratio: 16 / 9; /* format horizontal */
+  object-fit: cover; /* prend toute la div */
   cursor: pointer;
   border-radius: 1rem;
   transition: opacity 0.3s ease-in-out;
+  display: block; /* ✅ s’assure que l’image prend bien toute la largeur */
+  border: 2px solid black;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
 
 /* ---- Miniatures ---- */
@@ -67,7 +70,7 @@
   background-color: #fff;
   border-radius: 1rem;
   padding: 2rem;
-  box-shadow: 6px 6px 6px 5px rgba(0, 0, 0, 0.08);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
 
 .projects-details-text h1 {
@@ -96,30 +99,6 @@
   margin-bottom: 1rem;
 }
 
-/* ---- Responsive ---- */
-@media (max-width: 1024px) {
-  .projects-details-container {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 1rem;
-  }
-
-  .projects-details-image .main-image {
-    aspect-ratio: 16 / 9;
-  }
-}
-
-@media (max-width: 768px) {
-  .projects-details-text h1 {
-    font-size: 2rem;
-  }
-
-  .thumbnail {
-    width: 50px;
-    height: 50px;
-  }
-}
-
 /* ---- Modale d'image ---- */
 .image-modal {
   position: fixed;
@@ -131,7 +110,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2000;
+  z-index: 9999; /* ✅ au-dessus de tout */
   cursor: zoom-out;
   animation: fadeIn 0.3s ease-in-out;
 }
@@ -163,5 +142,23 @@
   to {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1200px) {
+  .projects-details {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-details-text h1 {
+    font-size: 2rem;
+  }
+
+  .thumbnail {
+    width: 50px;
+    height: 50px;
   }
 }

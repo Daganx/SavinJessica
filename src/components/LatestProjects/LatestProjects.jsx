@@ -44,10 +44,11 @@ export default function LatestProjects() {
               alt={project.title}
               className="project-image"
             />
-            <div className="project-hashtags">
-              <p>#{project.customer}</p>
-              <p>#{project.price}</p>
-              <p>#{project.place}</p>
+            <div className="project-overlay">
+              <h3>{project.title}</h3>
+              <p>{project.customer}</p>
+              <p>{project.price}</p>
+              <p>{project.place}</p>
             </div>
           </Link>
         ))}

@@ -10,7 +10,9 @@ export default function AllProjects() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await fetch("https://savinjessica-back.onrender.com/api/projects");
+        const res = await fetch(
+          "https://savinjessica-back.onrender.com/api/projects"
+        );
         const data = await res.json();
         setProjects(data);
       } catch (err) {
@@ -26,6 +28,7 @@ export default function AllProjects() {
 
   return (
     <div className="all-projects">
+      <h2>Réalisations</h2>
 
       <div className="all-projects-grid">
         {projects.map((project) => (
@@ -40,10 +43,11 @@ export default function AllProjects() {
               alt={project.title}
               className="all-projects-image"
             />
-            <div className="all-projects-hashtags">
-              <p>#{project.customer}</p>
-              <p>#{project.price}</p>
-              <p>#{project.place}</p>
+            <div className="all-projects-overlay">
+              <h3>{project.title}</h3>
+              <p>{project.customer}</p>
+              <p>{project.price}</p>
+              <p>{project.place}</p>
             </div>
           </Link>
         ))}
