@@ -92,7 +92,7 @@ export default function Approche() {
               d’éviter le redoutable 'Ah, mais je croyais que…' 😅
             </h3>
             <h3>
-              2.<span className="bold">Conception</span> : Brainstorming
+              2. <span className="bold">Conception</span> : Brainstorming
               intensif ! On sort les idées les plus folles (et les meilleures
               survivent 💡)
               <br />
@@ -100,11 +100,11 @@ export default function Approche() {
               la magie opère ✨.
             </h3>
             <h3>
-              3.<span className="bold">Suivi</span> : On teste, on ajuste, on
+              3. <span className="bold">Suivi</span> : On teste, on ajuste, on
               valide 📏📐!
             </h3>
             <h3>
-              4.<span className="bold">Livraison</span> : C’est le grand jour !
+              4. <span className="bold">Livraison</span> : C’est le grand jour !
               et le jour des waouhhhhhhhhhhs.
             </h3>
           </div>
