@@ -1,0 +1,241 @@
+.approche {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+}
+.approche-text {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.approche-text h2 {
+  text-align: center;
+  font-size: 3em;
+  font-family: "Fairplay";
+  font-weight: 400;
+  padding-bottom: 0.2em;
+}
+.approche-text h3 {
+  padding: 1rem;
+}
+.approche-img {
+  height: 100%;
+  width: 100%;
+  padding: 0.2em;
+}
+.approche-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+}
+.prestations {
+  display: flex;
+  flex-direction: column;
+}
+.prestations h3 {
+  text-align: center;
+  font-weight: 400;
+  padding: 1rem;
+}
+
+.prestations-text {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.prestations-text h3 {
+  padding: 1rem;
+  font-weight: 400;
+}
+.prestations h2 {
+  text-align: center;
+  font-size: 3em;
+  font-family: "Fairplay";
+  font-weight: 400;
+  padding-bottom: 0.2em;
+}
+.prestations-img {
+  height: 100%;
+  width: 100%;
+  padding: 0.2em;
+}
+.prestations-img img {
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+}
+.prestations-info {
+  padding-top: 0.2em;
+}
+.prestations-info ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 1rem;
+}
+.prestations-info ul li {
+  text-align: center;
+  list-style: inside;
+  font-size: 18.72px;
+}
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.timeline h2 {
+  text-align: center;
+  font-family: "Fairplay";
+  font-weight: 400;
+  font-size: 48px;
+}
+.timeline h3 {
+  text-align: center;
+  font-weight: 400;
+  padding: 1rem;
+}
+
+.tarification {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 1rem;
+}
+
+.tarification h2 {
+  text-align: center;
+  font-family: "Fairplay";
+  font-weight: 400;
+  font-size: 3em;
+}
+
+.tarification h3 {
+  font-weight: 400;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+.link-to-contact {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+.link-to-contact h3 {
+  font-family: "Fairplay";
+  padding-bottom: 1em;
+  font-weight: 400;
+  font-size: 3em;
+}
+.link-to-contact a {
+  background-color: #ff9058;
+  padding: 0.4em;
+  border-radius: 25px;
+  font-size: 1.3em;
+}
+
+@media (min-width: 1024px) {
+  .approche-text {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch; /* Étire les enfants pour qu'ils aient la même hauteur */
+    justify-content: center;
+    text-align: left;
+    gap: 2rem;
+    margin: 0 auto;
+    padding: 0.2rem;
+  }
+
+  .approche-img {
+    width: 50%;
+    height: auto;
+    display: flex;
+  }
+
+  .approche-img img {
+    width: 100%;
+    height: 100%; /* L’image prend la même hauteur que le conteneur */
+    object-fit: cover; /* Remplit sans déformer */
+    border-radius: 25px;
+  }
+
+  .approche-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .approche-info h2 {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 2rem;
+  }
+
+  .approche-info h3 {
+    line-height: 1.6;
+    padding: 0 1rem;
+  }
+
+  /* Section Prestations */
+  .prestations {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: stretch;
+  }
+
+  .prestations-img {
+    width: 50%;
+    height: auto;
+    display: flex;
+  }
+
+  .prestations-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+
+  .prestations-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .prestations-info h2 {
+    font-size: 48px;
+  }
+  .prestations-info ul li {
+    font-size: 1.3em;
+  }
+  /* Timeline */
+  .timeline {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .timeline-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.3em;
+  }
+  .timeline h3 {
+    font-size: 20.8px;
+  }
+  .tarification h2 {
+    font-size: 48px;
+  }
+
+  .link-to-contact h3 {
+    font-size: 48px;
+  }
+
+  .link-to-contact a {
+    padding: 0.8em;
+    border-radius: 25px;
+    font-size: 1.4em;
+  }
+}

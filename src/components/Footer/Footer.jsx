@@ -6,7 +6,7 @@ import "./footer.css";
 
 export default function Footer() {
   return (
-    <div className="footer">
+    <footer className="footer">
       <div className="footer-infos">
         <h1>Jessica Savin - Créatrice d'intérieurs</h1>
         <h2>
@@ -36,6 +36,6 @@ export default function Footer() {
           className="footer-logo-img"
         />
       </div>
-    </div>
+    </footer>
   );
 }
