@@ -9,6 +9,7 @@ import Login from "./components/Login/Login";
 import AdminDashboard from "./components/AdminDashboard/AdminDashboard";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 import ApprochePage from "./pages/Approche/ApprochePage";
+import About from "./components/About/About";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/projects/:id" element={<ProjectsDetails />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
         <Route
           path="/admin"

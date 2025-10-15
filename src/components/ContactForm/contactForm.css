@@ -37,7 +37,7 @@ textarea:focus {
 .contact-form button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #ccc;
+  background-color: #ff9058;
   color: black;
   border: none;
   cursor: pointer;
@@ -45,7 +45,7 @@ textarea:focus {
 }
 
 .contact-form button:hover {
-  background-color: #ff9058;
+  background-color: #ccc;
 }
 
 .contact-form form p {

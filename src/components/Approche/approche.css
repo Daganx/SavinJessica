@@ -1,43 +1,13 @@
-.approche {
-  display: flex;
-  flex-direction: column;
-  padding-top: 1rem;
-}
-.approche-text {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  font-weight: 400;
-}
-.approche-text h2 {
-  text-align: center;
-  font-size: 3em;
-  font-family: "Fairplay";
-  font-weight: 400;
-  padding-bottom: 0.2em;
-}
-.approche-text h3 {
-  padding: 1rem;
-  font-weight: 400;
-}
-.approche-img {
-  height: 100%;
-  width: 100%;
-  padding: 0.2em;
-}
-.approche-img img {
-  width: 100%;
-  height: 100%;
-  border-radius: 25px;
-}
 .prestations {
   display: flex;
   flex-direction: column;
+  padding-top: 1rem;
 }
 .prestations h3 {
   text-align: center;
   font-weight: 400;
   padding: 1rem;
+  font-size: 1.3rem;
 }
 
 .prestations-text {
@@ -48,6 +18,7 @@
 .prestations-text h3 {
   padding: 1rem;
   font-weight: 400;
+  font-size: 1rem;
 }
 .prestations h2 {
   text-align: center;
@@ -77,7 +48,6 @@
 }
 .prestations-info ul li {
   text-align: center;
-  list-style: inside;
   font-size: 18.72px;
 }
 .timeline {
@@ -95,6 +65,7 @@
   text-align: center;
   font-weight: 400;
   padding: 1rem;
+  font-size: 1.3rem;
 }
 
 .tarification {
@@ -121,6 +92,9 @@
   padding-top: 1rem;
   padding-bottom: 2rem;
   text-align: center;
+  background-color: #ff9058;
+  margin: 1rem;
+  border-radius: 25px;
 }
 .link-to-contact h3 {
   font-family: "Fairplay";
@@ -129,56 +103,15 @@
   font-size: 3em;
 }
 .link-to-contact a {
-  background-color: #ff9058;
+  background-color: black;
   padding: 0.4em;
   border-radius: 25px;
   font-size: 1.3em;
+  color: #fff;
 }
 
+
 @media (min-width: 1024px) {
-  .approche-text {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch; /* Étire les enfants pour qu'ils aient la même hauteur */
-    justify-content: center;
-    text-align: left;
-    gap: 2rem;
-    margin: 0 auto;
-    padding: 0.2rem;
-  }
-
-  .approche-img {
-    width: 50%;
-    height: auto;
-    display: flex;
-  }
-
-  .approche-img img {
-    width: 100%;
-    height: 100%; /* L’image prend la même hauteur que le conteneur */
-    object-fit: cover; /* Remplit sans déformer */
-    border-radius: 25px;
-  }
-
-  .approche-info {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .approche-info h2 {
-    text-align: center;
-    font-size: 48px;
-    margin-bottom: 2rem;
-  }
-
-  .approche-info h3 {
-    line-height: 1.6;
-    padding: 0 1rem;
-  }
-
   /* Section Prestations */
   .prestations {
     display: flex;

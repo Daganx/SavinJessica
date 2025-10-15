@@ -2,7 +2,6 @@ import "./approche.css";
 import Separator from "../Separator/Separator";
 import { Link } from "react-router-dom";
 
-import approche1 from "../../assets/images/approche/approche.jpg";
 import approche2 from "../../assets/images/approche/approche2.jpg";
 import approche3 from "../../assets/images/approche/approche3.jpg";
 
@@ -10,32 +9,6 @@ export default function Approche() {
   return (
     <>
       <section>
-        <div className="approche">
-          <div className="approche-text">
-            <div className="approche-img">
-              <img src={approche1} alt="Jessica Savin Créatrice d'intérieurs" />
-            </div>
-            <div className="approche-info">
-              <h2>Mon approche :</h2>
-              <h3>
-                Avant les plans, il y a l’écoute. <br />
-                <br />
-                Chaque projet commence par une rencontre : vos envies, vos
-                besoins, votre façon de vivre. Je prends le temps de comprendre
-                ce qui compte pour vous — les petits rituels, les zones de
-                calme, les espaces de partage. Puis vient la création.
-                <br />
-                <br />
-                L’architecture d’intérieur, pour moi, c’est une histoire
-                d’équilibre : entre l’émotion et la fonctionnalité, entre le
-                beau et le juste.
-              </h3>
-            </div>
-          </div>
-        </div>
-
-        <Separator />
-
         <div className="prestations">
           <div className="prestations-img">
             <img src={approche2} alt="Jessica Savin Créatrice d'intérieurs" />
@@ -50,26 +23,26 @@ export default function Approche() {
               complète ou d’un accompagnement déco, j’adapte ma démarche à vos
               besoins et à votre rythme.
               <br />
-              <br /> Mon objectif : que vous puissiez vous projeter, choisir en
+              <br />✅ Mon objectif : que vous puissiez vous projeter, choisir en
               toute confiance et savourer la transformation, étape après étape.
               <br />
               <br />
-              Du premier échange à la touche finale, je veille à créer un
+              🤝 Du premier échange à la touche finale, je veille à créer un
               dialogue fluide et bienveillant, où votre espace devient le reflet
               harmonieux de votre quotidien.
             </h3>
             <div className="prestations-details">
               <ul>
                 <li>
-                  <span className="bold">Conseil & accompagnement</span> :
+                  <span className="bold">🧭 Conseil & accompagnement</span> :
                   études de plans, choix couleurs, matériaux
                 </li>
                 <li>
-                  <span className="bold">Projet complet</span> : conception,
+                  <span className="bold">🧩 Projet complet</span> : conception,
                   suivi, coordination
                 </li>
                 <li>
-                  <span className="bold">Décoration & ambiance</span> : mise en
+                  <span className="bold">🌸 Décoration & ambiance</span> : mise en
                   scène, sélection mobilier, finitions
                 </li>
               </ul>

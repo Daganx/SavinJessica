@@ -2,32 +2,78 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 1.5em;
+  position: relative;
+  overflow: visible; /* pour ne pas couper le burger */
+  z-index: 10;
 }
+
 .navbar-logo {
   height: 100px;
   width: 100px;
 }
+
 .navbar-logo-img {
   height: 100%;
   width: 100%;
 }
+
+/* === BURGER ICON === */
+.navbar-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 1001;
+  position: relative;
+  margin-right: 8px;
+}
+
+.navbar-burger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center; /* pivot parfaitement centré */
+}
+
+/* --- Animation burger → croix bien centrée --- */
+.navbar-burger.open span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.navbar-burger.open span:nth-child(2) {
+  opacity: 0;
+}
+.navbar-burger.open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* === LINKS === */
 .navbar-links {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .navbar-links ul {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   gap: 16px;
-  padding-right: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
+
 .navbar-links ul li a {
   position: relative;
   text-decoration: none;
   color: inherit;
+  font-weight: 500;
 }
+
 .navbar-links ul li a::after {
   content: "";
   position: absolute;
@@ -38,9 +84,12 @@
   background-color: #ff9058;
   transition: width 0.3s ease;
 }
+
 .navbar-links ul li a:hover::after {
   width: 100%;
 }
+
+/* === GRAND ÉCRAN === */
 @media (min-width: 1024px) {
   .navbar-links {
     padding-right: 2em;
@@ -49,11 +98,58 @@
   .navbar-links ul {
     gap: 32px;
   }
+
   .navbar-links ul li {
     font-size: 1.6em;
   }
+
   .navbar-logo {
     height: 140px;
     width: 140px;
+  }
+}
+
+/* === MENU BURGER RESPONSIVE === */
+@media (max-width: 768px) {
+  /* --- Icône burger --- */
+  .navbar-burger {
+    display: flex;
+    position: absolute;
+    top: 35px; /* descend un peu le burger pour un meilleur centrage */
+    right: 20px; /* espace à droite pour ne plus être collé au bord */
+    z-index: 1002; /* reste toujours au-dessus du menu */
+  }
+
+  /* --- Menu déroulant --- */
+  .navbar-links {
+    position: fixed; /* passe de absolute à fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: white;
+    overflow: hidden;
+    transition: height 0.3s ease, opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    z-index: 1000;
+  }
+
+  .navbar-links.active {
+    height: 100vh; /* prend toute la hauteur */
+    opacity: 1;
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .navbar-links ul li a {
+    font-size: 1.3em;
   }
 }

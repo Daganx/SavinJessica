@@ -1,54 +1,32 @@
-import { useEffect, useState } from "react";
-import presentation from "../../assets/images/presentation/presentation.jpg";
-import presentation2 from "../../assets/images/presentation/presentation2.jpg";
-import presentation3 from "../../assets/images/presentation/presentation3.jpg";
-import presentation4 from "../../assets/images/presentation/presentation4.jpg";
-
 import "./presentation.css";
 
 export default function Presentation() {
-  const images = [presentation, presentation2, presentation3, presentation4];
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  // ⏱️ Change d'image toutes les 4 secondes
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === images.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [images.length]);
-
   return (
     <section className="presentation">
       <div className="presentation-text">
-        <h2>À Propos</h2>
+        <h2>Mon approche</h2>
         <h3>
-          Il y a des vocations qui naissent d’un détail. Pour moi, ce fut une
-          porte.<br /><br />
-          J’avais 4 ans, c’était la nuit. J’ai attrapé un rouleau de peinture —
-          un geste simple, presque instinctif — et la pièce s’est transformée.
+          Avant les plans, il y a l’écoute.
           <br /><br />
-          La lumière, les émotions, la perception de l’espace… tout semblait
-          différent.<br /><br />
-          J’étais fascinée par la façon dont un détail pouvait redonner vie à un
-          lieu, créer une émotion. Depuis, une vie pro s’est glissée entre mes
-          pinceaux et mes plans — mais cette fascination ne m’a jamais quittée.
+          Une écoute attentive, presque silencieuse, celle qui permet de saisir
+          l’essence d’un lieu et de ceux qui l’habitent.
+          <br />
+          Chaque projet commence par une rencontre, un échange, une
+          conversation. Vos envies, vos besoins, vos habitudes de vie deviennent
+          les premières esquisses d’une histoire à écrire ensemble.
+          <br /><br /> L’architecture d’intérieur, pour moi, est une quête d’équilibre
+          — un dialogue subtil entre l’émotion et la fonctionnalité, entre la
+          beauté du geste et la justesse du quotidien.
           <br /><br />
-          Aujourd'hui, j’utilise cet enchantement pour donner forme à vos envies.
+          C’est l’art de révéler ce qui existe déjà, parfois caché, parfois en
+          attente, pour que chaque espace devienne une évidence.
+          <br /> Je prends le temps de comprendre ce qui compte pour vous, ce
+          qui vous relie à votre espace : les petits rituels, les zones de
+          calme, les instants partagés.
+          <br /><br />
+          Puis vient le temps de la création, celui où l’intuition devient
+          forme, où la lumière et les matières donnent vie à l’espace.
         </h3>
-      </div>
-
-      <div className="presentation-img">
-        {images.map((img, index) => (
-          <img
-            key={index}
-            src={img}
-            alt={`Présentation Jessica Savin Décoratrice d'intérieurs ${index + 1}`}
-            className={index === currentIndex ? "active" : ""}
-          />
-        ))}
       </div>
     </section>
   );

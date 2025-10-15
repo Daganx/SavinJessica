@@ -28,8 +28,6 @@ export default function AllProjects() {
 
   return (
     <div className="all-projects">
-      <h2>Réalisations</h2>
-
       <div className="all-projects-grid">
         {projects.map((project) => (
           <Link
