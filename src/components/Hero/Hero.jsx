@@ -16,7 +16,7 @@ export default function Hero() {
       <div className="hero-text">
         <h1>Jessica Savin - Créatrice d'intérieurs</h1>
         <a
-          href="https://www.instagram.com/jscreatricedinterieurs/"
+          href="https://www.instagram.com/jessicasavin.interieurs/"
           target="_blank"
           rel="noopener noreferrer"
         >

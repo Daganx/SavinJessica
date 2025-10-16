@@ -26,17 +26,18 @@
 @media (min-width: 1024px) {
   .presentation h2 {
     text-align: center;
-    font-size: 3em;
+    font-size: 2.6em;
   }
 
   .presentation h3 {
     padding: 1rem;
     text-align: center;
+    font-size: 0.9em;
   }
 
   .presentation-text {
     max-width: 100%;
-    padding: 2rem;
+    padding: 1rem;
     text-align: center;
     font-size: 1.3em;
   }

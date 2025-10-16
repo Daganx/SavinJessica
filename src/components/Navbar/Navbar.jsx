@@ -21,7 +21,10 @@ export default function Navbar() {
       </Link>
 
       {/* Icône burger faite à la main */}
-      <div className={`navbar-burger ${isOpen ? "open" : ""}`} onClick={toggleMenu}>
+      <div
+        className={`navbar-burger ${isOpen ? "open" : ""}`}
+        onClick={toggleMenu}
+      >
         <span></span>
         <span></span>
         <span></span>
@@ -31,13 +34,13 @@ export default function Navbar() {
       <div className={`navbar-links ${isOpen ? "active" : ""}`}>
         <ul>
           <li>
-            <Link to="/prestations" onClick={() => setIsOpen(false)}>
-              Prestations
+            <Link to="/projects" onClick={() => setIsOpen(false)}>
+              Réalisations
             </Link>
           </li>
           <li>
-            <Link to="/projects" onClick={() => setIsOpen(false)}>
-              Réalisations
+            <Link to="/prestations" onClick={() => setIsOpen(false)}>
+              Prestations
             </Link>
           </li>
           <li>

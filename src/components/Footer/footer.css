@@ -50,7 +50,7 @@
   margin-right: 5vw;
 }
 
-@media screen and (max-width: 475px) {
+@media screen and (max-width: 768px) {
   .footer-logo {
     display: none;
   }

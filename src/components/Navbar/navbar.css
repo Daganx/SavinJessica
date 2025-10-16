@@ -100,7 +100,7 @@
   }
 
   .navbar-links ul li {
-    font-size: 1.6em;
+    font-size: 1.3em;
   }
 
   .navbar-logo {
@@ -115,14 +115,14 @@
   .navbar-burger {
     display: flex;
     position: absolute;
-    top: 35px; /* descend un peu le burger pour un meilleur centrage */
-    right: 20px; /* espace à droite pour ne plus être collé au bord */
-    z-index: 1002; /* reste toujours au-dessus du menu */
+    top: 35px;
+    right: 20px;
+    z-index: 1002;
   }
 
   /* --- Menu déroulant --- */
   .navbar-links {
-    position: fixed; /* passe de absolute à fixed */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -139,7 +139,7 @@
   }
 
   .navbar-links.active {
-    height: 100vh; /* prend toute la hauteur */
+    height: 100vh;
     opacity: 1;
   }
 

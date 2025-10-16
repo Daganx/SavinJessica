@@ -1,8 +1,7 @@
 import "./approche.css";
 import Separator from "../Separator/Separator";
 import { Link } from "react-router-dom";
-
-import approche2 from "../../assets/images/approche/approche2.jpg";
+import approche from "../../assets/images/presentation/presentation3.jpg";
 import approche3 from "../../assets/images/approche/approche3.jpg";
 
 export default function Approche() {
@@ -11,10 +10,10 @@ export default function Approche() {
       <section>
         <div className="prestations">
           <div className="prestations-img">
-            <img src={approche2} alt="Jessica Savin Créatrice d'intérieurs" />
+            <img src={approche} alt="Jessica Savin Créatrice d'intérieurs" />
           </div>
           <div className="prestations-info">
-            <h2>Mes prestations :</h2>
+            <h2>Mes prestations</h2>
             <h3>
               Chaque projet est unique, parce que chaque manière d’habiter l’est
               aussi.
@@ -23,8 +22,9 @@ export default function Approche() {
               complète ou d’un accompagnement déco, j’adapte ma démarche à vos
               besoins et à votre rythme.
               <br />
-              <br />✅ Mon objectif : que vous puissiez vous projeter, choisir en
-              toute confiance et savourer la transformation, étape après étape.
+              <br />✅ Mon objectif : que vous puissiez vous projeter, choisir
+              en toute confiance et savourer la transformation, étape après
+              étape.
               <br />
               <br />
               🤝 Du premier échange à la touche finale, je veille à créer un
@@ -42,8 +42,8 @@ export default function Approche() {
                   suivi, coordination
                 </li>
                 <li>
-                  <span className="bold">🌸 Décoration & ambiance</span> : mise en
-                  scène, sélection mobilier, finitions
+                  <span className="bold">🌸 Décoration & ambiance</span> : mise
+                  en scène, sélection mobilier, finitions
                 </li>
               </ul>
             </div>
@@ -57,7 +57,7 @@ export default function Approche() {
             <img src={approche3} alt="Jessica Savin Créatrice d'intérieurs" />
           </div>
           <div className="timeline-info">
-            <h2>Ma manière de travailler :</h2>
+            <h2>Ma manière de travailler</h2>
             <h3>
               1. <span className="bold">Rencontre</span> : Je me mets à ta place
               (sans piquer ta chaise 🪑) pour comprendre tes besoins, tes
@@ -88,26 +88,70 @@ export default function Approche() {
         <Separator />
 
         <div className="tarification">
-          <h2>Tarifications :</h2>
+          <h2>💡 Tarifs & Prestations</h2>
           <h3>
-            1ère visite ou rendez-vous conseil :{" "}
-            <span className="bold">120 € /h</span> (déduit sur la prestation
-            étude de projet)
+            ✨
+            <span className="underline">
+              {" "}
+              1ère visite ou rendez-vous conseil
+            </span>{" "}
+            : 120 €/h
           </h3>
           <h3>
-            Etude du projet : entre <span className="bold">40</span> et{" "}
-            <span className="bold">70</span> euros /m2
+            👉 Si le feeling est là et que vous souhaitez passer à l’étape
+            suivante,{" "}
+            <span className="bold">
+              ce montant est déduit de l’étude de projet
+            </span>{" "}
+            !<br />
+            <br /> Et si finalement vous préférez en rester là, cette visite
+            reste une
+            <span className="bold"> prestation à part entière</span>, riche en
+            idées et en conseils pour avancer à votre rythme.
+          </h3>
+          <br />
+          <h3>
+            🏗️ <span className="underline">Etude du projet</span> : entre 40 et
+            70 euros /m2
           </h3>
           <h3>
-            Suivi et coordination du chantier : entre{" "}
-            <span className="bold">8</span> et <span className="bold">15%</span>{" "}
-            du montant HT des travaux.
+            Parce que chaque mètre carré mérite toute notre attention (et un peu
+            de style !).
+            <br /> On entre dans le concret : plans, ambiances, matériaux,
+            agencement… tout ce qu’il faut pour imaginer votre futur espace.
+          </h3>
+          <h3>
+            👉 Et si vous décidez de donner vie à tout ça, la suite logique,
+            c’est{" "}
+            <span className="bold">
+              le suivi et la coordination du chantier
+            </span>
+            !
+          </h3>
+          <h3>
+            <br/>
+            🧱
+            <span className="underline">
+              Suivi et coordination du chantier
+            </span>{" "}
+            : entre 8 et 15 % du montant HT des travaux.
             <br />
-            moins de <span className="bold">20 000€</span> HT = Forfait.
+            <br />
+            Je m’occupe de tout, du premier coup de marteau jusqu’à la touche
+            finale.
+            <br />
+            👉 Pour les petits projets (moins de 20 000 € HT), on simplifie avec
+            un <span className="bold">forfait</span> tout compris.
           </h3>
           <h3>
-            Prestations ponctuelles (ex conseil déco, couleur, bilan éclairage)
-            : forfait.{" "}
+            <br />
+            🎨 <span className="underline">Prestations ponctuelles</span> :
+            Forfait
+            <br />
+            <br />
+            Envie d’un simple conseil déco, d’un coup de main couleur, ou d’un
+            bilan éclairage ? Idéal pour un petit coup de boost esthétique sans
+            tout chambouler !
           </h3>
         </div>
 
