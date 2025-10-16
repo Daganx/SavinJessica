@@ -37,7 +37,7 @@
 
 .about-text-container h2 {
   font-weight: 400;
-  font-size: 1.1em;
+  font-size: 1.3em;
   line-height: 1.8;
 }
 
@@ -91,6 +91,6 @@
   }
 
   .about-text-container h2 {
-    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-size: 1.3em;
   }
 }

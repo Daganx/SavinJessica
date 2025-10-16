@@ -37,6 +37,89 @@
   width: 100%;
 }
 
+/* --- Bouton zone d’activité --- */
+.zone-button {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: #d3b97f;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.zone-button:hover {
+  background-color: #c1a466;
+  transform: scale(1.03);
+}
+
+.zone-icon {
+  font-size: 1.2rem;
+}
+
+/* --- MODALE --- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease forwards;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 90%;
+  padding: 1rem;
+  position: relative;
+  animation: scaleIn 0.25s ease forwards;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.modal-close:hover {
+  transform: scale(1.1);
+}
+
+.zone-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+
 @media (min-width: 1024px) {
   .contact{
     flex-direction: row;

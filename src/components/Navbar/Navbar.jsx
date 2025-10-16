@@ -31,8 +31,8 @@ export default function Navbar() {
       <div className={`navbar-links ${isOpen ? "active" : ""}`}>
         <ul>
           <li>
-            <Link to="/approche" onClick={() => setIsOpen(false)}>
-              Approche
+            <Link to="/prestations" onClick={() => setIsOpen(false)}>
+              Prestations
             </Link>
           </li>
           <li>
