@@ -1,5 +1,6 @@
 import "./about.css";
 import about from "../../assets/images/about/about.jpg";
+import aboutTimeline from "../../assets/images/about/image.png"
 import Separator from "../Separator/Separator";
 
 export default function About() {
@@ -18,23 +19,18 @@ export default function About() {
             <br />
             J’avais 4 ans, c’était la nuit. J’ai attrapé un rouleau de peinture
             — un geste simple, presque instinctif — et la pièce s’est
-            transformée.
+            transformée, tout semblait différent.
+            <br />
+            <br /> Puis, une vie professionnelle dans la banque s’est glissée
+            entre mes pinceaux et mes plans, y mêlant précision, gestion
+            budgétaire et un sérieux à toute épreuve.
             <br />
             <br />
-            La lumière, les émotions, la perception de l’espace… tout semblait
-            différent.
-            <br />
-            <br />
-            J’étais fascinée par la façon dont un détail pouvait redonner vie à
-            un lieu, créer une émotion.
-            <br />
-            <br />
-            Depuis, une vie pro s’est glissée entre mes pinceaux et mes plans —
-            mais cette fascination, ne m’a jamais quittée.
-            <br />
-            <br /> Aujourd'hui, j’utilise cet enchantement pour donner forme à
-            vos envies.
+            Mais cette fascination ne m’a jamais quittée, et en 2023, j’ai
+            choisi d’entamer une formation pour approfondir mes connaissances en
+            design d’espace.
           </h2>
+          <img src={aboutTimeline} alt="" />
         </div>
       </section>
       <Separator />

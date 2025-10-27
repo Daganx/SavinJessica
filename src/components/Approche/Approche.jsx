@@ -15,35 +15,26 @@ export default function Approche() {
           <div className="prestations-info">
             <h2>Mes prestations</h2>
             <h3>
-              Chaque projet est unique, parce que chaque manière d’habiter l’est
-              aussi.
-              <br />
-              Qu’il s’agisse d’un simple conseil couleur, d’une rénovation
-              complète ou d’un accompagnement déco, j’adapte ma démarche à vos
-              besoins et à votre rythme.
-              <br />
               <br />✅ Mon objectif : que vous puissiez vous projeter, choisir
               en toute confiance et savourer la transformation, étape après
               étape.
               <br />
-              <br />
-              🤝 Du premier échange à la touche finale, je veille à créer un
-              dialogue fluide et bienveillant, où votre espace devient le reflet
-              harmonieux de votre quotidien.
+              <br />⭐ Mes compétences :
             </h3>
             <div className="prestations-details">
               <ul>
                 <li>
-                  <span className="bold">🧭 Conseil & accompagnement</span> :
-                  études de plans, choix couleurs, matériaux
+                  <span className="bold">L’écoute : </span>Transformer vos
+                  projets en <span className="bold">espaces uniques</span>
                 </li>
                 <li>
-                  <span className="bold">🧩 Projet complet</span> : conception,
-                  suivi, coordination
+                  <span className="bold">Le sens du détail : </span>Chaque
+                  espace raconte <span className="bold">votre histoire</span>
                 </li>
                 <li>
-                  <span className="bold">🌸 Décoration & ambiance</span> : mise
-                  en scène, sélection mobilier, finitions
+                  <span className="bold">Créativité :</span> Donner vie à vos{" "}
+                  <span className="bold">idées</span> les plus{" "}
+                  <span className="bold">audacieuses</span>
                 </li>
               </ul>
             </div>
@@ -129,7 +120,7 @@ export default function Approche() {
             !
           </h3>
           <h3>
-            <br/>
+            <br />
             🧱
             <span className="underline">
               Suivi et coordination du chantier

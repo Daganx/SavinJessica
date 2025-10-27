@@ -69,6 +69,10 @@
   .about-text-container h2 {
     font-size: 1.2em;
   }
+  #root > section > div.about-text-container > img{
+    width: 100%;
+    height: auto;
+  }
 }
 
 /* === MOBILE : égaliser image et texte === */
@@ -91,5 +95,9 @@
 
   .about-text-container h2 {
     font-size: 1em;
+  }
+  #root > section > div.about-text-container > img{
+    width: 100%;
+    height: 100%;
   }
 }

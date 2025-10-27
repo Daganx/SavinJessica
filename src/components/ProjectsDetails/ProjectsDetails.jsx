@@ -86,7 +86,7 @@ export default function ProjectsDetails() {
               </li>
               <li>
                 <strong>
-                  <span className="bold">Prix :</span>
+                  <span className="bold">Budget tout compris :</span>
                 </strong>{" "}
                 {project.price}
               </li>
