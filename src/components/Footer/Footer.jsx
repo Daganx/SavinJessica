@@ -21,13 +21,11 @@ export default function Footer() {
           <FontAwesomeIcon icon={faMailBulk} size="1x" color="black" /> -
           jscreatricedinterieurs@gmail.com
         </h4>
-        <a
-          href="https://entreprendre.service-public.gouv.fr/vosdroits/F33527#:~:text=Les%20conditions%20g%C3%A9n%C3%A9rales%20de%20vente%20(CGV)%20contiennent%20un%20certain%20nombre,ou%20de%20prestations%20de%20services.&text=Attention-,Il%20ne%20faut%20pas%20confondre%20les%20CGV%20avec%20les,d'utilisations%20(CGU)."
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        <h5>Conditions Générales de Vente</h5>
-        </a>
+        <h5>
+          <a href="/conditions/cgv.pdf" target="_blank" rel="noopener noreferrer">
+            Conditions générales de vente
+          </a>
+        </h5>
       </div>
       <div className="footer-logo">
         <img
