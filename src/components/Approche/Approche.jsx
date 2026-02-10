@@ -19,7 +19,7 @@ export default function Approche() {
               en toute confiance et savourer la transformation, étape après
               étape.
               <br />
-              <br />⭐ Mes compétences :
+              <br />⭐ Mes compétences :
             </h3>
             <div className="prestations-details">
               <ul>
@@ -80,69 +80,17 @@ export default function Approche() {
 
         <div className="tarification">
           <h2>💡 Tarifs & Prestations</h2>
+          <h3>Parce que vous méritez bien :</h3>
+          <h3>👉🏻 Une complice stylée qui travaille en douce pour sublimer votre chez-vous, votre business🎨</h3>
           <h3>
-            ✨
-            <span className="underline">
-              {" "}
-              1ère visite ou rendez-vous conseil
-            </span>{" "}
-            : 120 €/h
+            👉🏻 Quelqu’un qui gère votre budget comme un pro pour en tirer un maximum, tout en dénichant des bons plans, des matériaux et des contacts que vous n’auriez probablement jamais croisés seul. 🧭</h3>
+          <h3>
+            👉🏻 Cette petite dose d’audace qui fait toute la différence : des idées inattendues, des détails qui claquent, une harmonie qui transforme un simple intérieur en véritable coup de cœur. ✨
           </h3>
           <h3>
-            👉 Si le feeling est là et que vous souhaitez passer à l’étape
-            suivante,{" "}
-            <span className="bold">
-              ce montant est déduit de l’étude de projet
-            </span>{" "}
-            !<br />
-            <br /> Et si finalement vous préférez en rester là, cette visite
-            reste une
-            <span className="bold"> prestation à part entière</span>, riche en
-            idées et en conseils pour avancer à votre rythme.
+            👉🏻 Quelqu’un qui orchestre en coulisses les différents artisans pour éviter le chaos et faire en sorte que tout roule parfaitement.
           </h3>
-          <br />
-          <h3>
-            🏗️ <span className="underline">Etude du projet</span> : entre 40 et
-            70 euros /m2
-          </h3>
-          <h3>
-            Parce que chaque mètre carré mérite toute notre attention (et un peu
-            de style !).
-            <br /> On entre dans le concret : plans, ambiances, matériaux,
-            agencement… tout ce qu’il faut pour imaginer votre futur espace.
-          </h3>
-          <h3>
-            👉 Et si vous décidez de donner vie à tout ça, la suite logique,
-            c’est{" "}
-            <span className="bold">
-              le suivi et la coordination du chantier
-            </span>
-            !
-          </h3>
-          <h3>
-            <br />
-            🧱
-            <span className="underline">
-              Suivi et coordination du chantier
-            </span>{" "}
-            : entre 8 et 15 % du montant HT des travaux.
-            <br />
-            <br />
-            Je m’occupe de tout, du premier coup de marteau jusqu’à la touche
-            finale.
-            <br />
-            👉 Pour les petits projets (moins de 20 000 € HT), on simplifie avec
-            un <span className="bold">forfait</span> tout compris.
-          </h3>
-          <h3>
-            <br />
-            🎨 <span className="underline">Prestations ponctuelles</span> :
-            Forfait
-            <br />
-            <br />
-            Envie d’un simple conseil déco, d’un coup de main couleur, ou d’un
-            bilan éclairage ? Idéal pour un petit coup de boost esthétique sans
-            tout chambouler !
+          <h3>👉🏻 Quelqu’un qui prend cette vision un peu floue que vous avez dans la tête 😶‍🌫️ et vous aide à la concrétiser.
           </h3>
         </div>
 
