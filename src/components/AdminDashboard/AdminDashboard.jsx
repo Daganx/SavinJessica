@@ -6,6 +6,8 @@ export default function AdminDashboard() {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
   const [editingId, setEditingId] = useState(null);
+  const [showPreview, setShowPreview] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [formData, setFormData] = useState({
     title: "",
     description: "",
@@ -224,92 +226,130 @@ export default function AdminDashboard() {
       {message && <p className="message">{message}</p>}
 
       <form onSubmit={handleSubmit} className="admin-form">
-        <input
-          name="title"
-          placeholder="Titre"
-          value={formData.title}
-          onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-          required
-        />
-        <textarea
-          name="description"
-          placeholder="Description"
-          value={formData.description}
-          onChange={(e) =>
-            setFormData({ ...formData, description: e.target.value })
-          }
-        />
-        <textarea
-          name="prestation"
-          placeholder="Prestation"
-          value={formData.prestation}
-          onChange={(e) =>
-            setFormData({ ...formData, prestation: e.target.value })
-          }
-        />
-        <input
-          name="customer"
-          placeholder="Client"
-          value={formData.customer}
-          onChange={(e) =>
-            setFormData({ ...formData, customer: e.target.value })
-          }
-        />
-        <input
-          name="year"
-          placeholder="Année"
-          value={formData.year}
-          onChange={(e) => setFormData({ ...formData, year: e.target.value })}
-        />
-        <input
-          name="price"
-          placeholder="Prix"
-          value={formData.price}
-          onChange={(e) => setFormData({ ...formData, price: e.target.value })}
-        />
-        <input
-          name="time"
-          placeholder="Durée"
-          value={formData.time}
-          onChange={(e) => setFormData({ ...formData, time: e.target.value })}
-        />
-        <input
-          name="need"
-          placeholder="Besoin"
-          value={formData.need}
-          onChange={(e) => setFormData({ ...formData, need: e.target.value })}
-        />
-        <input
-          name="place"
-          placeholder="Lieu"
-          value={formData.place}
-          onChange={(e) => setFormData({ ...formData, place: e.target.value })}
-        />
+        <div className="form-field">
+          <label htmlFor="title">Titre</label>
+          <input
+            id="title"
+            name="title"
+            placeholder="Titre du projet"
+            value={formData.title}
+            onChange={(e) => setFormData({ ...formData, title: e.target.value })}
+            required
+          />
+        </div>
+        <div className="form-field">
+          <label htmlFor="description">Description</label>
+          <textarea
+            id="description"
+            name="description"
+            placeholder="Description du projet"
+            value={formData.description}
+            onChange={(e) =>
+              setFormData({ ...formData, description: e.target.value })
+            }
+          />
+        </div>
+        <div className="form-field">
+          <label htmlFor="prestation">Prestation</label>
+          <textarea
+            id="prestation"
+            name="prestation"
+            placeholder="Prestation"
+            value={formData.prestation}
+            onChange={(e) =>
+              setFormData({ ...formData, prestation: e.target.value })
+            }
+          />
+        </div>
+        <div className="form-field">
+          <label htmlFor="customer">Client</label>
+          <input
+            id="customer"
+            name="customer"
+            placeholder="Nom du client"
+            value={formData.customer}
+            onChange={(e) =>
+              setFormData({ ...formData, customer: e.target.value })
+            }
+          />
+        </div>
+        <div className="form-field">
+          <label htmlFor="year">Année</label>
+          <input
+            id="year"
+            name="year"
+            placeholder="2024"
+            value={formData.year}
+            onChange={(e) => setFormData({ ...formData, year: e.target.value })}
+          />
+        </div>
+        <div className="form-field">
+          <label htmlFor="price">Prix</label>
+          <input
+            id="price"
+            name="price"
+            placeholder="Budget"
+            value={formData.price}
+            onChange={(e) => setFormData({ ...formData, price: e.target.value })}
+          />
+        </div>
+        <div className="form-field">
+          <label htmlFor="time">Durée</label>
+          <input
+            id="time"
+            name="time"
+            placeholder="Durée du projet"
+            value={formData.time}
+            onChange={(e) => setFormData({ ...formData, time: e.target.value })}
+          />
+        </div>
+        <div className="form-field">
+          <label htmlFor="need">Besoin</label>
+          <input
+            id="need"
+            name="need"
+            placeholder="Besoin du client"
+            value={formData.need}
+            onChange={(e) => setFormData({ ...formData, need: e.target.value })}
+          />
+        </div>
+        <div className="form-field">
+          <label htmlFor="place">Lieu</label>
+          <input
+            id="place"
+            name="place"
+            placeholder="Localisation"
+            value={formData.place}
+            onChange={(e) => setFormData({ ...formData, place: e.target.value })}
+          />
+        </div>
 
-        {/* Upload images */}
-        <input
-          type="file"
-          accept="image/*"
-          multiple
-          onChange={handleFileUpload}
-        />
-
-        {/* Preview des images avec suppression */}
-        <div className="images-preview">
-          {formData.images.map((img, i) => (
-            <div key={i} className="image-item">
-              <img src={img} alt={`preview-${i}`} width="100" height="70" />
-              <button
-                type="button"
-                onClick={() => handleRemoveImage(i)}
-                aria-label={`Supprimer l'image ${i + 1}`}
-                title="Supprimer"
-                className="remove-image-btn"
-              >
-                ×
-              </button>
+        <div className="form-field">
+          <label>Images</label>
+          <input
+            type="file"
+            accept="image/*"
+            multiple
+            onChange={handleFileUpload}
+          />
+          {formData.images.length > 0 && (
+            <div className="images-preview">
+              {formData.images.map((img, i) => (
+                <div key={i} className="image-item">
+                  <img src={img} alt={`preview-${i}`} />
+                  <button
+                    type="button"
+                    onClick={() => handleRemoveImage(i)}
+                    aria-label={`Supprimer l'image ${i + 1}`}
+                    title="Supprimer"
+                    className="remove-image-btn"
+                  >
+                    ×
+                  </button>
+                </div>
+              ))}
             </div>
-          ))}
+          )}
         </div>
 
         <button type="submit" className="btn submit-btn">
@@ -338,42 +378,129 @@ export default function AdminDashboard() {
             Annuler l'édition
           </button>
         )}
+        <button
+          type="button"
+          onClick={() => setShowPreview(!showPreview)}
+          className="btn preview-toggle-btn"
+        >
+          {showPreview ? "Masquer la prévisualisation" : "Aperçu du projet"}
+        </button>
       </form>
 
-      <hr className="separator-line" />
+      {showPreview && formData.title && (
+        <div className="project-preview">
+          <h4 className="preview-title">Aperçu</h4>
+          <div className="preview-image">
+            {formData.images.length > 0 ? (
+              <>
+                <img
+                  src={formData.images[currentImageIndex]}
+                  alt={`Preview ${currentImageIndex + 1}`}
+                  className="preview-main-image"
+                />
+                {formData.images.length > 1 && (
+                  <div className="preview-thumbnails">
+                    {formData.images.map((img, i) => (
+                      <img
+                        key={i}
+                        src={img}
+                        alt={`Thumbnail ${i + 1}`}
+                        className={`preview-thumbnail ${i === currentImageIndex ? "active" : ""}`}
+                        onClick={() => setCurrentImageIndex(i)}
+                      />
+                    ))}
+                  </div>
+                )}
+              </>
+            ) : (
+              <div className="preview-no-image">Aucune image</div>
+            )}
+          </div>
+          <div className="preview-content">
+            <h1 className="preview-project-title">{formData.title}</h1>
+            <div className="preview-grid">
+              {formData.customer && (
+                <div className="preview-cell">
+                  <span className="cell-label">Client</span>
+                  <span className="cell-value">{formData.customer}</span>
+                </div>
+              )}
+              {formData.year && (
+                <div className="preview-cell">
+                  <span className="cell-label">Année</span>
+                  <span className="cell-value">{formData.year}</span>
+                </div>
+              )}
+              {formData.price && (
+                <div className="preview-cell">
+                  <span className="cell-label">Budget</span>
+                  <span className="cell-value">{formData.price}</span>
+                </div>
+              )}
+              {formData.time && (
+                <div className="preview-cell">
+                  <span className="cell-label">Durée</span>
+                  <span className="cell-value">{formData.time}</span>
+                </div>
+              )}
+              {formData.place && (
+                <div className="preview-cell">
+                  <span className="cell-label">Lieu</span>
+                  <span className="cell-value">{formData.place}</span>
+                </div>
+              )}
+              {formData.need && (
+                <div className="preview-cell">
+                  <span className="cell-label">Besoin</span>
+                  <span className="cell-value">{formData.need}</span>
+                </div>
+              )}
+            </div>
+            {formData.prestation && (
+              <div className="preview-bio">
+                <span className="bio-label">Prestation</span>
+                <p>{formData.prestation}</p>
+              </div>
+            )}
+            {formData.description && (
+              <p className="preview-description">{formData.description}</p>
+            )}
+          </div>
+        </div>
+      )}
 
-      <h3>Vos projets</h3>
-      {loading ? (
-        <p>Chargement…</p>
-      ) : projects.length === 0 ? (
-        <p>Aucun projet pour le moment.</p>
-      ) : (
-        <div className="projects-list">
-          {projects.map((p) => (
-            <div key={p._id} className="project-card-admin">
-              <div className="project-info">
-                <div>
+      <section className="projects-section">
+        <h3>Vos projets</h3>
+        {loading ? (
+          <p className="projects-loading">Chargement…</p>
+        ) : projects.length === 0 ? (
+          <p className="projects-empty">Aucun projet pour le moment.</p>
+        ) : (
+          <div className="projects-list">
+            {projects.map((p) => (
+              <div key={p._id} className="project-card-admin">
+                <div className="project-info">
                   <div className="project-title">{p.title}</div>
                   <div className="project-meta">
                     {p.customer} • {p.year} • {p.place}
                   </div>
                 </div>
+                <div className="project-actions">
+                  <button className="btn" onClick={() => handleEdit(p)}>
+                    Modifier
+                  </button>
+                  <button
+                    className="btn btn--danger"
+                    onClick={() => handleDelete(p._id)}
+                  >
+                    Supprimer
+                  </button>
+                </div>
               </div>
-              <div className="project-actions">
-                <button className="btn" onClick={() => handleEdit(p)}>
-                  Modifier
-                </button>
-                <button
-                  className="btn btn--danger"
-                  onClick={() => handleDelete(p._id)}
-                >
-                  Supprimer
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
+            ))}
+          </div>
+        )}
+      </section>
     </div>
   );
 }
