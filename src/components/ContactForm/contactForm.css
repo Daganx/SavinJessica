@@ -1,59 +1,87 @@
-.contact-form {
-  width: 80%;
-  padding-top: 1rem;
-}
-.contact-form form {
+/* ===== CONTACT FORM ===== */
+.contact-form-inner {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  gap: 50px;
-  font-family: "PTSans";
+  gap: 0;
 }
 
-.contact-form input,
-textarea {
-  width: 100%;
-  padding: 10px 5px;
+/* ── Chaque champ label + input ── */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #d0cbc4;
+  padding: 1.2rem 0;
+}
+
+.form-field:first-child {
+  border-top: 1px solid #d0cbc4;
+}
+
+.form-field label {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #b5aea6;
+  margin-bottom: 0.45rem;
+}
+
+.form-field input,
+.form-field textarea {
+  background: none;
   border: none;
-  border-bottom: 2px solid #ccc;
   outline: none;
-  font-size: 16px;
-  transition: border-color 0.3s;
-  background-color: transparent;
+  font-family: "Fairplay", Georgia, serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #1a1714;
+  line-height: 1.5;
+  resize: none;
+  width: 100%;
+  padding: 0;
+  transition: color 0.2s ease;
 }
 
-.contact-form input:focus,
-textarea:focus {
-  border-bottom-color: #ff9058;
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: #d0cbc4;
+  font-style: italic;
 }
 
-.contact-form textarea {
-  min-height: 200px;
-  resize: vertical;
+.form-field textarea {
+  min-height: 110px;
 }
 
-.contact-form button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #ff9058;
-  color: black;
-  border: none;
+/* ── Bouton envoi ── */
+.form-submit {
+  margin-top: 2rem;
+  align-self: flex-start;
+  background: none;
+  border: 1px solid #1a1714;
+  color: #1a1714;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.9rem 2.5rem;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
 }
 
-.contact-form button:hover {
-  background-color: #ccc;
+.form-submit:hover {
+  background-color: #ff9058;
+  color: #fff;
 }
 
-.contact-form form p {
-  margin-top: 10px;
-  font-size: 14px;
-  color: green;
-}
-
-.contact-form form p.error {
-  color: red;
+/* ── Messages de statut ── */
+.form-success {
+  margin-top: 1.5rem;
+  font-family: "Fairplay", Georgia, serif;
+  font-size: 0.95rem;
+  color: #5a544e;
+  line-height: 1.6;
 }

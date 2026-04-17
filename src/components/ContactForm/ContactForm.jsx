@@ -1,16 +1,18 @@
-/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
-
 import "./contactForm.css";
+
+const fields = [
+  { name: "name", type: "text", label: "Nom", placeholder: "Votre nom", required: true },
+  { name: "email", type: "email", label: "Email", placeholder: "Votre adresse email", required: true },
+  { name: "phone", type: "tel", label: "Téléphone", placeholder: "Votre numéro", required: false },
+  { name: "subject", type: "text", label: "Sujet", placeholder: "L'objet de votre message", required: true },
+  { name: "budget", type: "text", label: "Budget", placeholder: "Votre budget", required: true },
+];
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
+    name: "", email: "", phone: "", subject: "", budget: "", message: "",
   });
   const [status, setStatus] = useState("");
 
@@ -21,74 +23,62 @@ export default function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     emailjs
-      .send(
-        "service_rcgysxo",
-        "template_rd8x9w2",
-        formData,
-        "QNXHeYKYn-ezFuwra"
-      )
+      .send("service_rcgysxo", "template_rd8x9w2", formData, "QNXHeYKYn-ezFuwra")
       .then(
-        (result) => {
-          setStatus("Message envoyé avec succès !");
-          setFormData({
-            name: "",
-            email: "",
-            phone: "",
-            subject: "",
-            message: "",
-          });
+        () => {
+          setStatus("success");
+          setFormData({ name: "", email: "", phone: "", subject: "", budget: "", message: "" });
         },
         (error) => {
           console.error(error.text);
-          setStatus("Erreur lors de l'envoi. Veuillez réessayer.");
+          setStatus("error");
         }
       );
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="name"
-        placeholder="Nom"
-        value={formData.name}
-        onChange={handleChange}
-        required
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="Email"
-        value={formData.email}
-        onChange={handleChange}
-        required
-      />
-      <input
-        type="tel"
-        name="phone"
-        placeholder="Téléphone"
-        value={formData.phone}
-        onChange={handleChange}
-      />
-      <input
-        type="text"
-        name="subject"
-        placeholder="Sujet"
-        value={formData.subject}
-        onChange={handleChange}
-        required
-      />
-      <textarea
-        name="message"
-        placeholder="Message"
-        value={formData.message}
-        onChange={handleChange}
-        required
-      />
-      <button type="submit">Envoyer</button>
-      {status && <p>{status}</p>}
+    <form className="contact-form-inner" onSubmit={handleSubmit}>
+
+      {fields.map(({ name, type, label, placeholder, required }) => (
+        <div className="form-field" key={name}>
+          <label htmlFor={name}>{label}</label>
+          <input
+            id={name}
+            type={type}
+            name={name}
+            placeholder={placeholder}
+            value={formData[name]}
+            onChange={handleChange}
+            required={required}
+          />
+        </div>
+      ))}
+
+      <div className="form-field">
+        <label htmlFor="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Parlez-moi de votre projet…"
+          value={formData.message}
+          onChange={handleChange}
+          required
+        />
+      </div>
+
+      <button type="submit" className="form-submit">Envoyer</button>
+
+      {status === "success" && (
+        <p className="form-success">
+          Votre message a bien été envoyé. Je vous répondrai dans les plus brefs délais.
+        </p>
+      )}
+      {status === "error" && (
+        <p className="form-success" style={{ color: "#a05a4e" }}>
+          Une erreur est survenue. Merci de réessayer ou de me contacter directement par email.
+        </p>
+      )}
     </form>
   );
 }

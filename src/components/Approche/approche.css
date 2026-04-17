@@ -1,184 +1,356 @@
-.prestations {
-  display: flex;
-  flex-direction: column;
-  padding-top: 1rem;
-}
-.prestations h3 {
-  text-align: center;
-  font-weight: 400;
-  padding: 1rem;
-  font-size: 1.2rem;
+.approche {
+  border-bottom: 1px solid #d0cbc4;
 }
 
-.prestations-text {
+/* === PRESTATIONS === */
+.prestations {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-bottom: 1px solid #d0cbc4;
+  padding: 2rem;
+}
+
+.prestations-image {
+  height: 320px;
+  overflow: hidden;
+}
+
+.prestations-image img {
   width: 100%;
   height: 100%;
-  text-align: center;
+  object-fit: cover;
 }
-.prestations-text h3 {
-  padding: 1rem;
-  font-weight: 400;
-  font-size: 1rem;
-}
-.prestations h2 {
-  text-align: center;
-  font-size: 3em;
-  font-family: "Fairplay";
-  font-weight: 400;
-  padding-bottom: 0.2em;
-}
-.prestations-img {
-  height: 100%;
-  width: 100%;
-  padding: 0.2em;
-}
-.prestations-img img {
-  height: 100%;
-  width: 100%;
-  border-radius: 25px;
-}
-.prestations-info {
-  padding-top: 0.2em;
-}
-.prestations-info ul {
+
+.prestations-content {
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 1rem;
+  gap: 1.5rem;
 }
-.prestations-info ul li {
-  text-align: center;
-  font-size: 18.72px;
+
+.prestations-content h2 {
+  font-family: "Glonto", Georgia, serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #d5baa4;
+  margin: 0;
+  letter-spacing: 0.02em;
 }
+
+.prestations-intro {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  color: #5a544e;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.prestations-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-top: 1px solid #d0cbc4;
+  border-left: 1px solid #d0cbc4;
+}
+
+.prestations-cell {
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  border-right: 1px solid #d0cbc4;
+  border-bottom: 1px solid #d0cbc4;
+}
+
+.cell-label {
+  font-family: "Glonto", Georgia, serif;
+  font-size: 0.82em;
+  color: #222;
+}
+
+.cell-value {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 0.95rem;
+  color: #1a1714;
+  line-height: 1.4;
+}
+
+/* === TIMELINE === */
+.timeline-section {
+  padding: 2rem;
+  border-bottom: 1px solid #d0cbc4;
+}
+
+.timeline-section h2 {
+  font-family: "Glonto", Georgia, serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #d5baa4;
+  margin: 0 0 2rem;
+  letter-spacing: 0.02em;
+}
+
 .timeline {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-}
-.timeline h2 {
-  text-align: center;
-  font-family: "Fairplay";
-  font-weight: 400;
-  font-size: 48px;
-}
-.timeline h3 {
-  text-align: center;
-  font-weight: 400;
-  padding: 1rem;
-  font-size: 1.2rem;
+  gap: 2rem;
 }
 
-.tarification {
+.timeline-image {
+  height: 280px;
+  overflow: hidden;
+}
+
+.timeline-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.timeline-steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-top: 1px solid #d0cbc4;
+  border-left: 1px solid #d0cbc4;
+}
+
+.step-cell {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem 1rem;
+  border-right: 1px solid #d0cbc4;
+  border-bottom: 1px solid #d0cbc4;
+}
+
+.step-number {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 2.4rem;
+  color: #b5aea6;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.step-content {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 1rem;
+  gap: 0.4rem;
+}
+
+.step-title {
+  font-family: "Glonto", Georgia, serif;
+  font-size: 1em;
+  color: #1a1714;
+}
+
+.step-description {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.9rem;
+  color: #5a544e;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* === TARIFICATION === */
+.tarification {
+  padding: 2rem;
+  border-bottom: 1px solid #d0cbc4;
 }
 
 .tarification h2 {
-  text-align: center;
-  font-family: "Fairplay";
+  font-family: "Glonto", Georgia, serif;
   font-weight: 400;
-  font-size: 3em;
+  font-size: 2rem;
+  color: #d5baa4;
+  margin: 0 0 2rem;
+  letter-spacing: 0.02em;
 }
 
-.tarification h3 {
+.tarification-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-top: 1px solid #d0cbc4;
+  border-left: 1px solid #d0cbc4;
+}
+
+.tarif-cell {
+  padding: 1.5rem 1rem;
+  border-right: 1px solid #d0cbc4;
+  border-bottom: 1px solid #d0cbc4;
+}
+
+.tarif-text {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.95rem;
+  color: #5a544e;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* === CTA === */
+.cta-section {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.cta-text {
+  font-family: "Glonto", Georgia, serif;
   font-weight: 400;
+  font-size: 1.8rem;
+  color: #d5baa4;
+  margin: 0;
   text-align: center;
-  font-size: 1.2em;
 }
 
-.link-to-contact {
-  padding-top: 1rem;
-  padding-bottom: 2rem;
-  text-align: center;
-  margin: 1rem;
-  border-radius: 25px;
-}
-.link-to-contact h3 {
-  font-family: "Fairplay";
-  padding-bottom: 1em;
-  font-weight: 400;
-  font-size: 3em;
-}
-.link-to-contact a {
-  background-color: #ff9058;
-  padding: 0.4em;
-  border-radius: 25px;
-  font-size: 1.3em;
-  color: black;
-  transition: background-color 0.3s;
+.cta-link {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #d5baa4;
+  padding: 1rem 2.5rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  letter-spacing: 0.05em;
 }
 
-.link-to-contact a:hover{
-  background-color: #ccc;
+.cta-link:hover {
+  background-color: #5a544e;
 }
 
-.underline{
-  text-decoration: underline;
+/* === TABLETTE === */
+@media (min-width: 768px) {
+  .prestations-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .timeline-steps {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tarification-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-
+/* === DESKTOP === */
 @media (min-width: 1024px) {
-  /* Section Prestations */
   .prestations {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: stretch;
+    grid-template-columns: 1fr 1fr;
   }
 
-  .prestations-img {
-    width: 50%;
+  .prestations-image {
     height: auto;
-    display: flex;
+    min-height: 500px;
   }
 
-  .prestations-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 25px;
+  .prestations-content {
+    padding: 3rem;
   }
 
-  .prestations-info {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .prestations-content h2 {
+    font-size: 2.4rem;
   }
-  .prestations-info h2 {
-    font-size: 48px;
+
+  .prestations-intro {
+    font-size: 1.1rem;
   }
-  .prestations-info ul li {
-    font-size: 1.2em;
+
+  .prestations-grid {
+    grid-template-columns: 1fr;
   }
-  /* Timeline */
+
+  .prestations-cell {
+    min-height: 100px;
+  }
+
+  .timeline-section {
+    padding: 3rem;
+  }
+
   .timeline {
-    display: flex;
     flex-direction: row;
-    align-items: stretch;
+    gap: 3rem;
   }
-  .timeline-info {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 1.3em;
+
+  .timeline-image {
+    flex: 1;
+    height: auto;
+    min-height: 400px;
   }
-  .timeline h3 {
-    font-size: 0.9em;
+
+  .timeline-steps {
+    flex: 1;
+    grid-template-columns: 1fr 1fr;
   }
+
+  .tarification {
+    padding: 3rem;
+  }
+
   .tarification h2 {
-    font-size: 48px;
+    font-size: 2.4rem;
   }
 
-  .link-to-contact h3 {
-    font-size: 48px;
+  .tarification-grid {
+    grid-template-columns: 1fr 1fr;
   }
 
-  .link-to-contact a {
-    padding: 0.8em;
-    border-radius: 25px;
-    font-size: 1.4em;
+  .tarif-cell {
+    min-height: 120px;
+  }
+
+  .cta-section {
+    padding: 4rem 3rem;
+  }
+
+  .cta-text {
+    font-size: 2.4rem;
+  }
+
+  .cta-link {
+    padding: 1.2rem 3rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* === MOBILE === */
+@media (max-width: 600px) {
+  .prestations-image {
+    height: 240px;
+  }
+
+  .prestations-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .prestations-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .timeline-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .timeline-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .tarification {
+    padding: 1.5rem 1rem;
+  }
+
+  .tarification h2 {
+    font-size: 1.6rem;
+  }
+
+  .cta-section {
+    padding: 2rem 1rem;
+  }
+
+  .cta-text {
+    font-size: 1.4rem;
   }
 }

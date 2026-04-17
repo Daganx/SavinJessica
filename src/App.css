@@ -1,0 +1,13 @@
+.main-content {
+  width: 100%;
+}
+
+.main-content.has-padding {
+  padding-top: 100px;
+}
+
+@media (min-width: 1024px) {
+  .main-content.has-padding {
+    padding-top: 140px;
+  }
+}

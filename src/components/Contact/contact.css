@@ -1,139 +1,215 @@
+/* ===== PAGE CONTACT ===== */
+.contact-page {
+  border-top: 1px solid #d0cbc4;
+}
+
+/* ── Layout principal ── */
 .contact {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-bottom: 1px solid #d0cbc4;
+}
+
+/* ── Photo ── */
+.contact-img {
+  overflow: hidden;
+  height: 360px;
+  border-bottom: 1px solid #d0cbc4;
+}
+
+.contact-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Colonne droite ── */
+.contact-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding-top: 1rem;
-  
 }
 
-.contact-img {
-  width: 100%;
+/* ── En-tête titre + bouton zone ── */
+.contact-header {
+  padding: 2.5rem 2rem 2rem;
+  border-bottom: 1px solid #d0cbc4;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
-.contact-img img{
-  height: 100%;
-  width: 100%;
-  border-radius: 25px;
-  padding: 1rem;
-}
-
-.contact-form h1 {
-  font-size: 2.8em;
-  font-family: "Fairplay";
+.contact-header h1 {
+  font-family: "Glonto", Georgia, serif;
   font-weight: 400;
-  padding-bottom: 1rem;
+  font-size: 2.6em;
+  color: #d5baa4;
+  margin: 0;
+  line-height: 1.15;
 }
 
-.contact-form h2 {
-  font-size: 1.1em;
-  text-align: center;
-  font-weight: 400;
-  padding-bottom: 2rem;
-}
-
-.contact-form{
-  width: 100%;
-}
-
-/* --- Bouton zone d’activité --- */
+/* ── Bouton zone d'activité ── */
 .zone-button {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  background-color: #d3b97f;
-  color: white;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  padding: 0.6rem 1.2rem;
+  align-self: flex-start;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  background: none;
+  border: 1px solid #d0cbc4;
+  color: #5a544e;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  padding: 0.6rem 1.1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .zone-button:hover {
-  background-color: #c1a466;
-  transform: scale(1.03);
+  border-color: #ff9058;
+  color: #1a1714;
 }
 
-.zone-icon {
-  font-size: 1.2rem;
+/* ── Texte introduction ── */
+.contact-intro {
+  padding: 2rem;
+  border-bottom: 1px solid #d0cbc4;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-/* --- MODALE --- */
+.contact-intro p {
+  font-family: "Helvetica", Georgia, serif;
+  font-weight: 400;
+  font-size: 1em;
+  color: #5a544e;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── Formulaire ── */
+.contact-form {
+  padding: 2rem;
+}
+
+/* ===== MODALE ===== */
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(26, 23, 20, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: fadeIn 0.3s ease forwards;
   z-index: 1000;
+  animation: fadeIn 0.25s ease forwards;
 }
 
 .modal-content {
   background-color: #fff;
-  border-radius: 12px;
   max-width: 800px;
   width: 90%;
-  padding: 1rem;
+  padding: 1.5rem;
   position: relative;
   animation: scaleIn 0.25s ease forwards;
 }
 
 .modal-close {
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: 1rem;
+  right: 1rem;
   background: none;
   border: none;
-  color: #333;
-  font-size: 1.2rem;
+  color: #5a544e;
+  font-size: 1.1rem;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: color 0.2s ease;
+  line-height: 1;
 }
 
 .modal-close:hover {
-  transform: scale(1.1);
+  color: #ff9058;
 }
 
 .zone-img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  display: block;
 }
 
-/* --- Animations --- */
+/* ===== ANIMATIONS ===== */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes scaleIn {
-  from { transform: scale(0.9); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+  from {
+    transform: scale(0.96);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
-
+/* ===== DESKTOP ===== */
 @media (min-width: 1024px) {
-  .contact{
-    flex-direction: row;
+  .contact {
+    grid-template-columns: 1fr 1fr;
   }
+
   .contact-img {
-    width: 70%;
+    height: auto;
+    min-height: 640px;
+    border-bottom: none;
+    border-right: 1px solid #d0cbc4;
   }
-  .contact-form h1{
-    font-size: 3em;
+
+  .contact-header {
+    padding: 3rem 3.5rem 2.5rem;
   }
-  .contact-form h2{
-    padding: 1rem;
-    font-size: 1.2em;
-    padding-bottom: 2rem;
+
+  .contact-header h1 {
+    font-size: 3.2em;
   }
-  
+
+  .contact-intro {
+    padding: 2.5rem 3.5rem;
+  }
+
+  .contact-intro p {
+    font-size: 1.05em;
+  }
+
+  .contact-form {
+    padding: 2rem 3.5rem 3rem;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+  .contact-header {
+    padding: 2rem 1.5rem 1.5rem;
+  }
+
+  .contact-header h1 {
+    font-size: 2em;
+  }
+
+  .contact-intro {
+    padding: 1.5rem;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
 }

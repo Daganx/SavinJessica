@@ -4,13 +4,13 @@ import logo from "../../assets/images/logo/logo.png";
 
 import "./navbar.css";
 
-export default function Navbar() {
+export default function Navbar({ isHome }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${isHome ? "" : "not-home"}`}>
       {/* Logo */}
       <Link to="/" className="navbar-logo">
         <img
@@ -20,7 +20,7 @@ export default function Navbar() {
         />
       </Link>
 
-      {/* Icône burger faite à la main */}
+      {/* Icône burger */}
       <div
         className={`navbar-burger ${isOpen ? "open" : ""}`}
         onClick={toggleMenu}
@@ -33,6 +33,13 @@ export default function Navbar() {
       {/* Liens */}
       <div className={`navbar-links ${isOpen ? "active" : ""}`}>
         <ul>
+          {!isHome && (
+            <li>
+              <Link to="/" onClick={() => setIsOpen(false)}>
+                Accueil
+              </Link>
+            </li>
+          )}
           <li>
             <Link to="/projects" onClick={() => setIsOpen(false)}>
               Réalisations

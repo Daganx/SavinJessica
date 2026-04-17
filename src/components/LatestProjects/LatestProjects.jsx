@@ -25,12 +25,16 @@ export default function LatestProjects() {
 
   const latestProjects = projects.slice(0, 4);
 
-  if (loading) return <p>Chargement des projets...</p>;
+  if (loading) return <p className="projects-loading">Chargement…</p>;
 
   return (
-    <div className="projects">
-      <h2>Dernières Réalisations</h2>
+    <section className="projects">
+      {/* Titre */}
+      <div className="projects-header">
+        <h2>DERNIÈRES RÉALISATIONS</h2>
+      </div>
 
+      {/* Grille 2×2 style Stats */}
       <div className="projects-grid">
         {latestProjects.map((project) => (
           <Link
@@ -46,22 +50,23 @@ export default function LatestProjects() {
             />
             <div className="project-overlay">
               <h3>{project.title}</h3>
-              <p>{project.customer}</p>
-              <p>{project.price}</p>
-              <p>{project.place}</p>
+              {project.place && <p className="overlay-place">{project.place}</p>}
+              {project.price && <p className="overlay-price">{project.price}</p>}
             </div>
           </Link>
         ))}
       </div>
 
-      <div className="projects-link">
+      {/* Lien bas */}
+      <div className="projects-footer">
         <Link
           to="/projects"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="projects-link"
         >
-          Voir toutes mes réalisations
+          VOIR TOUTES MES RÉALISATIONS
         </Link>
       </div>
-    </div>
+    </section>
   );
 }

@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Separator from "../Separator/Separator";
 import "./allProjects.css";
 
 export default function AllProjects() {
@@ -24,17 +23,19 @@ export default function AllProjects() {
     fetchProjects();
   }, []);
 
-  if (loading) return <p>Chargement des projets...</p>;
+  if (loading) return <p className="all-projects-loading">Chargement…</p>;
 
   return (
     <div className="all-projects">
+      <h1>RÉALISATIONS</h1>
       <div className="all-projects-grid">
-        {projects.map((project) => (
+        {projects.map((project, i) => (
           <Link
             key={project._id}
             to={`/projects/${project._id}`}
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="all-projects-card"
+            style={{ "--index": i }}
           >
             <img
               src={project.images[0]}
@@ -43,15 +44,12 @@ export default function AllProjects() {
             />
             <div className="all-projects-overlay">
               <h3>{project.title}</h3>
-              <p>{project.customer}</p>
-              <p>{project.price}</p>
-              <p>{project.place}</p>
+              {project.place && <p className="overlay-place">{project.place}</p>}
+              {project.price && <p className="overlay-price">{project.price}</p>}
             </div>
           </Link>
         ))}
       </div>
-
-      <Separator />
     </div>
   );
 }

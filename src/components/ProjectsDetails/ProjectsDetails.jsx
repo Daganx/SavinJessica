@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import Separator from "../Separator/Separator";
 import "./projectsDetails.css";
 
 export default function ProjectsDetails() {
@@ -34,6 +33,7 @@ export default function ProjectsDetails() {
   return (
     <>
       <section className="projects-details">
+        <h1 className="projects-details-title">{project.title}</h1>
         <div className="projects-details-container">
           {/* ---- Bloc Image ---- */}
           <div className="projects-details-image">
@@ -54,9 +54,8 @@ export default function ProjectsDetails() {
                         key={index}
                         src={img}
                         alt={`${project.title} - ${index + 1}`}
-                        className={`thumbnail ${
-                          index === currentIndex ? "active" : ""
-                        }`}
+                        className={`thumbnail ${index === currentIndex ? "active" : ""
+                          }`}
                         onClick={() => setCurrentIndex(index)}
                       />
                     ))}
@@ -68,55 +67,47 @@ export default function ProjectsDetails() {
             )}
           </div>
 
-          {/* ---- Bloc Texte ---- */}
-          <div className="projects-details-text">
-            <h1>{project.title}</h1>
-            <ul>
-              <li>
-                <strong>
-                  <span className="bold">Client</span> :
-                </strong>{" "}
-                {project.customer}
-              </li>
-              <li>
-                <strong>
-                  <span className="bold">Année :</span>
-                </strong>{" "}
-                {project.year}
-              </li>
-              <li>
-                <strong>
-                  <span className="bold">Budget tout compris :</span>
-                </strong>{" "}
-                {project.price}
-              </li>
-              <li>
-                <strong>
-                  <span className="bold">Durée :</span>
-                </strong>{" "}
-                {project.time}
-              </li>
-              <li>
-                <strong>
-                  <span className="bold">Lieu :</span>
-                </strong>{" "}
-                {project.place}
-              </li>
-              <li>
-                <strong>
-                  <span className="bold">Besoin :</span>
-                </strong>{" "}
-                {project.need}
-              </li>
-            </ul>
-            <p className="projects-bio">
-              <strong>
-                <span className="bold">Prestation</span> :
-              </strong>{" "}
-              {project.prestation}
-            </p>
-            <p className="projects-bio">{project.description}</p>
+          <div className="projects-details-bio">
+            <div className="bio-item">
+              <span className="bio-label">Prestation</span>
+              <p className="bio-text">{project.prestation}</p>
+            </div>
+
+            <div className="bio-item">
+              <span className="bio-label">Description</span>
+              <p className="bio-text">{project.description}</p>
+            </div>
           </div>
+
+          {/* ---- Bloc Texte ---- */}
+
+          <div className="projects-details-grid">
+            <div className="projects-details-cell">
+              <span className="cell-label">Client</span>
+              <span className="cell-value">{project.customer}</span>
+            </div>
+            <div className="projects-details-cell">
+              <span className="cell-label">Année</span>
+              <span className="cell-value">{project.year}</span>
+            </div>
+            <div className="projects-details-cell">
+              <span className="cell-label">Budget</span>
+              <span className="cell-value">{project.price}</span>
+            </div>
+            <div className="projects-details-cell">
+              <span className="cell-label">Durée</span>
+              <span className="cell-value">{project.time}</span>
+            </div>
+            <div className="projects-details-cell">
+              <span className="cell-label">Lieu</span>
+              <span className="cell-value">{project.place}</span>
+            </div>
+            <div className="projects-details-cell">
+              <span className="cell-label">Besoin</span>
+              <span className="cell-value">{project.need}</span>
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -131,8 +122,6 @@ export default function ProjectsDetails() {
           />
         </div>
       )}
-
-      <Separator />
     </>
   );
 }

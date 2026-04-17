@@ -11,6 +11,10 @@
   font-family: "PTSans-Bold";
   src: url("./assets/fonts/PTSans/PTSans-Bold.ttf");
 }
+@font-face {
+  font-family: "Glonto";
+  src: url("./assets/fonts/glonto/Glonto-Regular-BF68f9d25807673.otf");
+}
 
 body {
   margin: 0;
@@ -24,9 +28,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  list-style-type: none;
   list-style: none;
-  font-family: "PTSans";
+  font-family: "Glonto";
 }
 a {
   text-decoration: none;
@@ -34,10 +37,6 @@ a {
 }
 
 .bold {
-  font-family: 'PTSans-Bold';
+  font-family: "PTSans-Bold";
   font-weight: bold;
-}
-
-.test-ajout-classe{
-  
 }
